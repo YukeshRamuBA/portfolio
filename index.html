@@ -97,7 +97,7 @@
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand Logo / Monogram -->
-        <a href="#hero" class="flex items-center space-x-3 group">
+        <a href="#hero" class="flex items-center space-x-3 group shrink-0">
           <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-brand-accent flex items-center justify-center font-display font-extrabold text-slate-950 text-xl tracking-tighter shadow-glow group-hover:scale-105 transition-transform duration-300">
             YR
           </div>
@@ -108,7 +108,7 @@
         </a>
 
         <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
           <a href="#about" class="text-slate-300 hover:text-brand-400 transition-colors">About</a>
           <a href="#skills" class="text-slate-300 hover:text-brand-400 transition-colors">Competencies</a>
           <a href="#projects" class="text-slate-300 hover:text-brand-400 transition-colors">Case Studies</a>
@@ -118,21 +118,21 @@
         </div>
 
         <!-- Action Buttons -->
-        <div class="hidden md:flex items-center space-x-4">
+        <div class="hidden lg:flex items-center space-x-4 shrink-0">
           <a href="#contact" class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-950 bg-gradient-to-r from-brand-400 to-emerald-400 hover:from-brand-500 hover:to-emerald-500 transition-all duration-300 shadow-glow hover:shadow-glow-cyan hover:-translate-y-0.5">
             Hire / Connect
           </a>
         </div>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="md:hidden p-2.5 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white focus:outline-none">
+        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white focus:outline-none shrink-0">
           <i class="fa-solid fa-bars text-lg"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden glass-nav border-t border-slate-800 px-6 py-5 space-y-4">
+    <div id="mobileMenu" class="hidden lg:hidden glass-nav border-t border-slate-800 px-6 py-5 space-y-4">
       <a href="#about" class="mobile-nav-link block text-base text-slate-300 hover:text-brand-400 py-1">About</a>
       <a href="#skills" class="mobile-nav-link block text-base text-slate-300 hover:text-brand-400 py-1">Competencies</a>
       <a href="#projects" class="mobile-nav-link block text-base text-slate-300 hover:text-brand-400 py-1">Case Studies</a>
@@ -175,7 +175,7 @@
               <i class="fa-solid fa-sitemap text-sky-400"></i> Leading 12–15 Cross-Functional Squads
             </span>
             <span class="px-3.5 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/80 text-slate-300 flex items-center gap-2">
-              <i class="fa-solid fa-brain text-purple-400"></i> Claude MCP & Bedrock Chatbots
+              <i class="fa-solid fa-brain text-purple-400"></i> Claude, Copilot & Bedrock AI
             </span>
           </div>
 
@@ -189,8 +189,8 @@
               <i class="fa-regular fa-envelope text-brand-400"></i>
               <span>Get In Touch</span>
             </a>
-            <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="px-4 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition-all flex items-center justify-center">
-              <i class="fa-brands fa-linkedin-in text-lg text-sky-400"></i>
+            <a href="https://www.linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="w-[52px] h-[52px] shrink-0 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition-all flex items-center justify-center">
+              <i class="fa-brands fa-linkedin-in text-xl text-sky-400"></i>
             </a>
           </div>
         </div>
@@ -203,11 +203,11 @@
           <div class="relative w-72 sm:w-80 md:w-96">
             <!-- Framed Image Container -->
             <div class="relative rounded-3xl overflow-hidden p-1.5 bg-gradient-to-b from-slate-600/50 via-slate-800/40 to-emerald-500/40 shadow-2xl">
-              <div class="rounded-[22px] overflow-hidden bg-slate-900 aspect-[4/5] relative group">
+              <div class="rounded-[22px] overflow-hidden bg-slate-900 relative group" style="aspect-ratio: 4/5;">
                 <img 
                   src="profile.jpeg" 
                   alt="Yukesh Ramu - Lead Business Analyst" 
-                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   onerror="this.onerror=null; this.src='https://placehold.co/600x750/0f172a/38bdf8?text=Yukesh+Ramu'"
                 />
                 <!-- Subtle gradient overlay at bottom of photo -->
@@ -325,7 +325,7 @@
             I specialize in unpacking ambiguous enterprise challenges and orchestrating seamless technical deliveries. With 3 years of hands-on experience guiding Fortune-standard programs across healthcare, logistics, food & beverage, and maritime fleets in the US and Canada, I bridge the gap between high-level client expectations and precise agile execution.
           </p>
           <p class="text-slate-300 leading-relaxed mb-6 text-sm sm:text-base">
-            Beyond standard Business Analysis, I actively incorporate applied Generative AI—pioneering solutions using <strong>Now Assist</strong>, <strong>Claude Model Context Protocol (MCP)</strong>, and <strong>Amazon Bedrock</strong>, as well as AI-powered automated testing via <strong>Kiro</strong> to supercharge sprint cadence and eliminate regressions.
+            Beyond standard Business Analysis, I actively incorporate applied Generative AI—leveraging <strong>Claude</strong>, <strong>Copilot</strong>, and <strong>Now Assist</strong> for requirements analysis and documentation, alongside AI-powered automated testing via <strong>Playwright</strong> and the <strong>Kiro framework</strong> to supercharge sprint cadence and eliminate regressions.
           </p>
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-800">
@@ -375,7 +375,7 @@
               <div>
                 <h4 class="font-bold text-white text-base">ServiceNow Expertise</h4>
                 <p class="text-slate-400 text-xs sm:text-sm mt-1">
-                  In-depth mastery of SOM, ITSM, CSM, ITOM, HAM, CMDB, Employee Center, Workspace configurator, and automated testing with ServiceNow ATF.
+                  In-depth mastery of SOM, ITSM, CSM, FSM, ITOM, HAM, CMDB, Employee Center, and automated testing with ServiceNow ATF.
                 </p>
               </div>
             </div>
@@ -389,7 +389,7 @@
               <div>
                 <h4 class="font-bold text-white text-base">Agentic AI & Engineering</h4>
                 <p class="text-slate-400 text-xs sm:text-sm mt-1">
-                  Structuring contextual prompt architectures, MCP connectors with Claude for CRM updates, and Amazon Bedrock conversational workflows.
+                  Structuring contextual prompt architectures, MCP connectors with Claude for CRM updates, Copilot integration, and Amazon Bedrock workflows.
                 </p>
               </div>
             </div>
@@ -427,7 +427,7 @@
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> User Story Authoring & INVEST Criteria</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Gap Analysis & Process Flow Mapping</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> UAT Coordination & Stakeholder Sign-offs</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Total Cost of Ownership (TCO) Analysis</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Change Management & BA Artifact Review</li>
           </ul>
         </div>
 
@@ -456,7 +456,7 @@
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Amazon Bedrock Chatbot Architecture</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> ServiceNow Now Assist GenAI</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Claude MCP (Model Context Protocol)</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Kiro Framework AI Test Generation</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Copilot for Requirements Analysis</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Prompt Structuring & Context Injection</li>
           </ul>
         </div>
@@ -470,7 +470,7 @@
           <ul class="space-y-2 text-xs text-slate-300">
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Mentoring & Managing 6 BAs</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Leading 12-15 Member Cross-Functional Squads</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Sprint Planning & Backlog Refinement</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Sprint Planning & Backlog Management</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Release Coordination & Go-Live Cutover</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Executive & CTO Level Stakeholder Alignment</li>
           </ul>
@@ -484,10 +484,10 @@
           <h3 class="text-lg font-bold text-white mb-3">Testing & Validation</h3>
           <ul class="space-y-2 text-xs text-slate-300">
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> API Testing (Postman) & SQL Queries</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> End-to-End & Regression Test Suites</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Playwright & Automated Scripting</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> End-to-End, Smoke & Regression Test Suites</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Playwright Scripts via Kiro Framework</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Performance Load Testing (K6 & Grafana)</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Defect Triage & Root Cause Investigation</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Defect Tracking & Cross-Browser/Device QA</li>
           </ul>
         </div>
 
@@ -742,7 +742,7 @@
               <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
                 Healthcare Workflows
               </span>
-              <span class="text-xs text-slate-400">Apr 2024 – Aug 2025</span>
+              <span class="text-xs text-slate-400">Apr 2024 – Sep 2024</span>
             </div>
             <h3 class="text-xl font-bold text-white mb-2 hover:text-brand-400 transition-colors">
               Mass General Brigham: Clinical Workflow Automation
@@ -864,15 +864,19 @@
             <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
               <li class="flex items-start gap-2.5">
                 <i class="fa-solid fa-circle-check text-brand-400 mt-1 text-xs"></i>
-                <span><strong>Team Leadership:</strong> Lead and mentor a team of 6 Business Analysts across complex ServiceNow and cloud initiatives, reviewing functional artifacts, establishing standards, and unblocking delivery bottlenecks.</span>
+                <span>Lead and mentor a team of 6 Business Analysts supporting ServiceNow engagements, providing guidance on requirements analysis, reviewing BA artifacts, ensuring documentation quality, and resolving functional or analytical challenges.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fa-solid fa-circle-check text-brand-400 mt-1 text-xs"></i>
-                <span><strong>Primary Client BA:</strong> Serving as the main BA anchor across 5 US client engagements covering AI Chatbot development, ITAM, ServiceNow CSM, ITSM, Portals, HAM, and marine fleet tracking.</span>
+                <span>Serving as primary BA resource across 5 US client projects spanning AI chatbot development, IT Asset Management (ITAM), ServiceNow CSM, ITSM, Portals, HAM, multiple ServiceNow product suites, and marine transportation.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fa-solid fa-circle-check text-brand-400 mt-1 text-xs"></i>
-                <span><strong>Squad Orchestration:</strong> Independently guiding cross-functional teams of 12–15 members across sprint planning, daily standups, stakeholder sign-offs, and release coordination.</span>
+                <span>Independently managed cross-functional teams of 12-15 members across sprint planning, stakeholder sign-offs, and end-to-end release coordination.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-400 mt-1 text-xs"></i>
+                <span>Review and provide functional guidance on FRDs, user stories, process flows, acceptance criteria, and other BA artifacts, ensuring alignment with business requirements and delivery standards.</span>
               </li>
             </ul>
           </div>
@@ -899,15 +903,15 @@
             <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
               <li class="flex items-start gap-2.5">
                 <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-xs"></i>
-                <span><strong>US Enterprise Engagements:</strong> Delivered end-to-end BA and QA across 6 major US client projects and 2 internal platform initiatives in healthcare, freight logistics, and financial services.</span>
+                <span>Delivered BA and QA across 6 US client projects and 2 internal initiatives in healthcare, logistics, and financial services.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-xs"></i>
-                <span><strong>Dedicated Billed BA:</strong> Primary billed functional analyst for Mass General Brigham (Harvard-affiliated healthcare) and MODE Global (US logistics), owning discovery, FRD documentation, and UAT sign-offs.</span>
+                <span>Primary billed BA for Mass General Brigham (Harvard-affiliated healthcare) and MODE Global (US logistics) – independently owned requirements, stakeholder management, and UAT independently.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-xs"></i>
-                <span><strong>Internal Productivity Tools:</strong> Co-created <strong class="text-white">Ava Cabs</strong> (enterprise corporate cab management system) and <strong class="text-white">Ava Migration Estimator</strong> (project effort estimation tool).</span>
+                <span>Contributed to internal tools: <strong class="text-white">Ava Cabs</strong> (cab management) and <strong class="text-white">Ava Migration Estimator</strong> (project estimation).</span>
               </li>
             </ul>
 
@@ -917,7 +921,7 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
                 <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
                   <strong class="text-white block font-medium">Harvard AA&D (Oct 2023 - Mar 2024)</strong>
-                  <span>Requirements elicitation & SharePoint data verification for Harvard alumni management system.</span>
+                  <span>Requirements gathering, SharePoint data validation, UAT support for a Harvard alumni management system.</span>
                 </div>
                 <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
                   <strong class="text-white block font-medium">Canon Financial Services (Dec 2023 - Apr 2024)</strong>
@@ -1018,7 +1022,7 @@
             </div>
             <div>
               <span class="text-xs text-slate-400 font-medium block">LinkedIn Profile</span>
-              <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-purple-400 transition-colors">
+              <a href="https://www.linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-purple-400 transition-colors">
                 linkedin.com/in/yukeshramu
               </a>
             </div>
@@ -1090,7 +1094,7 @@
       </div>
       <p>© 2026 Yukesh Ramu. Crafted for Enterprise Excellence.</p>
       <div class="flex items-center space-x-4 text-slate-400 text-sm">
-        <a href="https://linkedin.com/in/yukeshramu" target="_blank" class="hover:text-sky-400 transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/yukeshramu" target="_blank" class="hover:text-sky-400 transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         <a href="mailto:yukeshramu111@gmail.com" class="hover:text-brand-400 transition-colors" title="Email"><i class="fa-regular fa-envelope"></i></a>
         <a href="tel:+919962806059" class="hover:text-emerald-400 transition-colors" title="Call"><i class="fa-solid fa-phone"></i></a>
       </div>
@@ -1116,88 +1120,91 @@
   </div>
 
   <script>
-    // Modal Deep Dive Data Dictionary
+    // Modal Deep Dive Data Dictionary - UPDATED TO MATCH RESUME METRICS
     const projectData = {
       project1: {
-        title: "Salesforce CRM to ServiceNow SOM Modernization",
-        client: "Zeb Internal Enterprise Platform",
-        role: "Lead Business Analyst (Leading 4 BAs, 15+ member squad)",
+        title: "Salesforce CRM to ServiceNow - Sales Order Management (SOM)",
+        client: "Zeb Internal Project",
+        role: "Lead Business Analyst",
         timeline: "Mar 2025 - Aug 2026",
-        challenge: "The commercial organization relied on disjointed legacy Salesforce processes that impeded lead velocity, obscured commission transparency, and hindered staffing allocations across multiple business units.",
-        solution: "Collaborated directly with the CTO to define the full architecture across ServiceNow Sales Order Management (SOM) and CSM. Architected AI-powered workflows using ServiceNow Now Assist and Claude integrated through Model Context Protocol (MCP) to automate account/deal progression through natural conversational prompts.",
+        challenge: "Salesforce CRM to ServiceNow implementation for end-to-end Sales Order Management (SOM), covering Lead, Account, Contact, and Opportunity lifecycle management, enhanced with ServiceNow AI capabilities and MCP integration with Claude.",
+        solution: "Led requirements discovery and functional analysis with Sales Reps, Account Executives, Solution Architects, AWS, and business/technical stakeholders across onsite and offshore teams, translating complex needs into actionable user stories and streamlined workflows.",
         impact: [
-          "Coordinated 20+ stakeholders across sales leadership, solution architects, and engineering.",
-          "Delivered end-to-end user stories, acceptance criteria, and executive performance dashboards.",
-          "Empowered sales representatives to query and update CRM entities in natural language with zero disruption to active pipeline."
+          "Worked closely with the CTO and led 4 BAs, coordinating a 15+ member cross-functional team and 20+ stakeholders across business, development, QA, architecture, and technical teams.",
+          "Owned Agile delivery including sprint planning, daily scrums, reviews, retrospectives, backlog management, requirement walkthroughs, and stakeholder sign-offs.",
+          "Defined AI-enabled ServiceNow capabilities using Now Assist and MCP with Claude, enabling natural-language creation/update of Accounts, Contacts, Leads, and Opportunities.",
+          "Defined interactive ServiceNow sales dashboards for leadership, providing visibility into Lead/Opportunity performance, Closed-Won/Lost, profit/loss, and commissions.",
+          "Managed end-to-end delivery from requirements and functional testing through issue triage, retesting, UAT/sign-offs, production deployment, and user documentation."
         ],
         tools: ["ServiceNow SOM & CSM", "Salesforce CRM", "Claude MCP", "Now Assist", "JIRA", "Figma", "AWS"]
       },
       project2: {
-        title: "MODE Global: 1,000+ Carrier Highway Integration",
-        client: "MODE Global (US Freight Brokerage)",
-        role: "Lead Business Analyst & QA Lead",
+        title: "MODE Global - Highway Integration",
+        client: "Avasoft (US logistics & freight brokerage)",
+        role: "Lead Business Analyst",
         timeline: "Nov 2024 - Jul 2025",
-        challenge: "MODE Global needed to transition from their legacy RMIS platform to the modern Highway ecosystem to streamline carrier onboarding, credential compliance, and continuous risk monitoring without freight downtime.",
-        solution: "Led end-to-end requirements gathering workshops, created FRDs and user flow diagrams across 2 sprints (30+ user stories). Personally designed and executed 300+ test scenarios, incorporating Postman API validations and SQL backend data audits.",
+        challenge: "Enterprise integration replacing RMIS with Highway for carrier onboarding, compliance, and workflow management across 1,000+ carriers.",
+        solution: "Led end-to-end requirements gathering – stakeholder workshops, FRDs, user stories, and process flow diagrams for a large-scale enterprise integration. Managed JIRA backlog across 2 active sprints with 30+ stories.",
         impact: [
-          "Seamless transition across 1,000+ active freight carriers.",
-          "Achieved ZERO critical defects during final client User Acceptance Testing (UAT).",
-          "Cut manual compliance review time significantly with automated API checks."
+          "Coordinated requirement sign-offs with 3 business stakeholders.",
+          "Designed and executed 300+ test cases; performed 10+ API and backend validations (Postman, SQL).",
+          "Achieved ZERO critical defects at UAT.",
+          "Facilitated UAT, managed defect tracking and resolution, and coordinated production release support."
         ],
         tools: ["Highway Integration", "JIRA", "Postman", "SQL", "Figma", "Visio", "Agile/Scrum"]
       },
       project3: {
-        title: "Institute of Child Psychology: Bedrock AI Chatbot",
-        client: "Institute of Child Psychology (US Child Mental Health)",
-        role: "Functional Business Analyst",
+        title: "Institute of Child Psychology - AI Chatbot",
+        client: "Zeb (US child mental health organization)",
+        role: "Business Analyst",
         timeline: "Sep 2025 - Mar 2026",
-        challenge: "Parents and educators required rapid, context-sensitive child psychology guidance across ICP's vast library of articles, courses, and multimedia assets via web and native mobile apps.",
-        solution: "Authored 50+ functional and non-functional specifications for an Amazon Bedrock-powered generative AI chatbot. Structured context injection protocols and safety guardrails. Facilitated JIRA backlogs for 12-15 cross-functional team members across UI/UX, mobile devs, and cloud engineers.",
+        challenge: "AI-powered web and mobile chatbot using Amazon Bedrock for personalized, context-aware responses across ICP's content ecosystem.",
+        solution: "Gathered and documented 50+ functional & non-functional requirements; prepared FRDs, user stories, and business/user flow diagrams. Led sprint planning and JIRA backlog management for a 12-15 member cross-functional team.",
         impact: [
-          "Successfully coordinated deployment to Apple App Store and Google Play Store.",
-          "Conducted end-to-end device testing, cross-browser validation, and load testing via K6 and Grafana.",
-          "Maintained ongoing TCO analysis and Confluence architecture docs."
+          "Collaborated with UI/UX on design validation and stakeholder walkthroughs; maintained Confluence docs and coordinated TCO analysis.",
+          "Facilitated UAT, sign-offs, and deployment planning; supported Play Store & App Store releases and post-production.",
+          "Executed end-to-end, cross-browser, and device testing; supported performance testing (K6, Grafana)."
         ],
         tools: ["Amazon Bedrock", "AWS Transcribe", "K6", "Grafana", "JIRA", "Confluence", "Figma"]
       },
       project4: {
-        title: "Synergy Flavours: ServiceNow ITSM, CSM & ITOM Implementation",
-        client: "Synergy Flavours (US Food & Beverage)",
+        title: "Synergy Flavours - ServiceNow ITSM, CSM & ITOM Implementation",
+        client: "Zeb (US food & beverage manufacturing company)",
         role: "Business Analyst",
         timeline: "Jan 2026 - Mar 2026",
-        challenge: "Legacy service delivery tools lacked visibility across CMDB, asset configuration, customer case management, and employee onboarding lifecycles.",
-        solution: "Translated complex business requirements into ServiceNow workflows across Incident, Request, Knowledge, Case Management, SOW Workspace, Employee Center, and HR onboarding. Performed ServiceNow Automated Test Framework (ATF) regression runs using Kiro-assisted AI test generation.",
+        challenge: "ServiceNow implementation covering ITSM, CSM, ITOM, Employee Center, SOW Workspace, CSM Workspace, portals, CMDB, and business integrations.",
+        solution: "Led client requirement gathering through current-state/future-state discussions and workshops, translating business needs into ServiceNow solutions across Incident, Request, Knowledge, Case Management, Workspaces, and HR onboarding/offboarding integrations.",
         impact: [
-          "Unified ITSM, CSM, and ITOM workspaces under one streamlined interface.",
-          "Automated catalog items, SLA triggers, and JIRA cross-system escalations.",
-          "Conducted client walkthroughs and guided UAT defect clearance to production."
+          "Performed ServiceNow ATF regression testing, using AI-assisted Kiro-generated test scripts, and validated implementation quality.",
+          "Prepared user stories and workflows, conducted client/UAT walkthroughs, managed clarifications.",
+          "Coordinated defect retesting and supported production deployment through stakeholder sign-off."
         ],
-        tools: ["ServiceNow ITSM/CSM/ITOM", "Employee Center", "ATF", "Kiro AI", "CMDB", "JIRA"]
+        tools: ["ServiceNow ITSM/CSM/ITOM", "Employee Center", "ATF", "Kiro", "CMDB", "JIRA"]
       },
       project5: {
-        title: "Mass General Brigham: Clinical Workflow Automation",
-        client: "Mass General Brigham (Harvard-affiliated US Healthcare)",
+        title: "Mass General Brigham - Power Apps",
+        client: "Avasoft (Harvard-affiliated US healthcare system)",
         role: "Business Analyst",
         timeline: "Apr 2024 - Sep 2024 | Mar 2025 - Aug 2025",
-        challenge: "Managing extensive manual clinical paperwork and maintaining strict data fidelity across 150,000+ patient records.",
-        solution: "Facilitated 5+ stakeholder workshops with hospital clinical and administrative staff. Authored FRDs and designed interactive Power Apps and SharePoint workflows. Governed massive data validation passes to safeguard record integrity.",
+        challenge: "Power Apps and SharePoint solutions to streamline clinical workflows and manage 1.5 lakh+ healthcare records.",
+        solution: "Drove 5+ stakeholder workshops to gather requirements; authored FRDs and designed user flows for Power Apps modules.",
         impact: [
-          "Validated data integrity across 1.5 Lakh (150,000+) medical records prior to go-live.",
-          "Eliminated clinical intake bottlenecks with low-code Power Apps solutions.",
-          "Delivered full regression passes and achieved prompt UAT sign-offs."
+          "Managed SharePoint data validation across 1.5 lakh records, ensuring data integrity before go-live.",
+          "Executed end-to-end testing, regression, and defect tracking.",
+          "Facilitated UAT sign-offs and change request management."
         ],
         tools: ["Power Apps", "SharePoint", "Figma", "Visio", "Healthcare Workflows", "Agile/Scrum"]
       },
       project6: {
-        title: "American Commercial Barge Line: ServiceNow HAM",
-        client: "ACBL (US Marine Transportation)",
+        title: "American Commercial Barge Line - ServiceNow HAM",
+        client: "Zeb (US marine transportation company)",
         role: "Business Analyst",
         timeline: "Sep 2025 - Jan 2026",
-        challenge: "Managing hardware assets, onboard vessel computers, and lifecycle tracking for a large-scale commercial barge and marine fleet operator.",
-        solution: "Owned requirements documentation and facilitated workflow sessions with IT and marine operations teams. Defined asset state transitions, warranty tracking, and lifecycle disposals in ServiceNow Hardware Asset Management (HAM).",
+        challenge: "ServiceNow HAM implementation for IT asset tracking and lifecycle management across a US marine fleet operator.",
+        solution: "Owned requirements documentation (FRDs, user stories) and facilitated workflow discussions with business and IT stakeholders.",
         impact: [
-          "Delivered centralized IT asset visibility across fleet depots and marine vessels.",
-          "Executed comprehensive test cases and managed prompt defect resolution through post-production support."
+          "Executed test cases, coordinated UAT, managed defect resolution.",
+          "Supported deployment and post-production processes for fleet-wide asset tracking."
         ],
         tools: ["ServiceNow HAM", "ServiceNow ITSM", "CSM", "Agile/Scrum", "Asset Tracking"]
       }
@@ -1220,12 +1227,12 @@
 
         <div class="space-y-4 text-xs sm:text-sm text-slate-300 mb-6">
           <div>
-            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">The Challenge</h4>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Project Scope</h4>
             <p class="leading-relaxed bg-slate-950/60 p-3.5 rounded-xl border border-slate-800">${data.challenge}</p>
           </div>
 
           <div>
-            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">The Solution</h4>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Role & Execution</h4>
             <p class="leading-relaxed bg-slate-950/60 p-3.5 rounded-xl border border-slate-800">${data.solution}</p>
           </div>
 
