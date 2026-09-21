@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yukesh Ramu | Lead Business Analyst</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0b0f19; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    .glow-blob { filter: blur(100px); opacity: 0.15; pointer-events: none; }
+  </style>
+</head>
+
+<body class="bg-[#090d16] text-slate-200 antialiased selection:bg-cyan-500 selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full glow-blob -z-10"></div>
+  <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-purple-600 rounded-full glow-blob -z-10"></div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#090d16]/80 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-200">
+            YR
+          </div>
+          <div>
+            <span class="text-base sm:text-lg font-bold tracking-tight text-white block leading-tight">Yukesh Ramu</span>
+            <span class="text-xs text-slate-400 font-medium hidden sm:block">Lead Business Analyst</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#summary" class="hover:text-cyan-400 transition-colors">About</a>
+          <a href="#competencies" class="hover:text-cyan-400 transition-colors">Core Skills</a>
+          <a href="#case-studies" class="hover:text-cyan-400 transition-colors">Case Studies</a>
+          <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
+          <a href="#contact" class="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-95 shadow-md shadow-cyan-500/20 transition-all">Get in Touch</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 focus:outline-none" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0e1424] border-b border-slate-800 px-4 pt-3 pb-5 space-y-2">
+      <a href="#summary" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">About</a>
+      <a href="#competencies" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Core Skills</a>
+      <a href="#case-studies" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Case Studies</a>
+      <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Experience</a>
+      <a href="#contact" class="block px-3 py-2 text-center rounded-md bg-cyan-500 text-white font-semibold mt-2">Get in Touch</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-12 sm:pt-20 pb-16 sm:pb-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
+          
+          <!-- Bio & Heading -->
+          <div class="w-full lg:w-3/5 text-center lg:text-left space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/70 border border-cyan-800/50 text-cyan-400 text-xs sm:text-sm font-medium">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Available for Strategic BA & Lead Roles
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+              Architecting Enterprise Value with <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">ServiceNow & AI</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Lead Business Analyst with 3 years of enterprise IT experience directing requirements, multi-sprint deliveries, and cross-functional teams of 12–15 across North America. Specialist in ServiceNow (SOM, ITSM, CSM, ITOM, HAM) and Applied Generative AI integrations.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="#case-studies" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all text-sm sm:text-base flex items-center gap-2">
+                Explore Case Studies <i class="fa-solid fa-arrow-down text-xs"></i>
+              </a>
+              <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-200 font-semibold transition-all text-sm sm:text-base flex items-center gap-2">
+                <i class="fa-brands fa-linkedin text-blue-400"></i> LinkedIn Profile
+              </a>
+            </div>
+
+            <!-- Quick Contacts Row -->
+            <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-400 border-t border-slate-800/80">
+              <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-cyan-400"></i> Chennai, India</span>
+              <a href="mailto:yukeshramu111@gmail.com" class="hover:text-cyan-300 flex items-center gap-2"><i class="fa-solid fa-envelope text-cyan-400"></i> yukeshramu111@gmail.com</a>
+              <a href="tel:+919962806059" class="hover:text-cyan-300 flex items-center gap-2"><i class="fa-solid fa-phone text-cyan-400"></i> +91 9962806059</a>
+            </div>
+          </div>
+
+          <!-- Profile Photo Frame -->
+          <div class="w-full lg:w-2/5 flex justify-center items-center">
+            <div class="relative w-64 h-72 sm:w-80 sm:h-96 group">
+              <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-3xl blur-md opacity-40 group-hover:opacity-75 transition duration-500"></div>
+              
+              <div class="relative w-full h-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-700/80 shadow-2xl flex items-center justify-center">
+                <img 
+                  id="profile-img" 
+                  src="profile.jpg"
+                  alt="Yukesh Ramu - Lead Business Analyst" 
+                  class="w-full h-full object-cover object-top"
+                  loading="eager"
+                  onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Yukesh+Ramu&background=0284c7&color=fff&size=512';"
+                />
+              </div>
+
+              <!-- Floating Highlights -->
+              <div class="absolute -bottom-4 -left-4 bg-[#0e1628]/95 backdrop-blur-md border border-slate-700/80 px-3 py-2 rounded-xl shadow-lg flex items-center gap-2 text-xs font-semibold text-slate-200">
+                <i class="fa-solid fa-users text-cyan-400"></i> Leads 6 BAs
+              </div>
+              <div class="absolute -top-3 -right-3 bg-[#0e1628]/95 backdrop-blur-md border border-slate-700/80 px-3 py-2 rounded-xl shadow-lg flex items-center gap-2 text-xs font-semibold text-slate-200">
+                <i class="fa-solid fa-microchip text-indigo-400"></i> Claude MCP & Bedrock
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY STATS METRICS -->
+    <section class="border-y border-slate-800/80 bg-slate-900/40 py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="p-4 rounded-xl bg-slate-800/20 border border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-cyan-400">3+</div>
+            <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Years Enterprise IT</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-800/20 border border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-indigo-400">6</div>
+            <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">BAs Mentored & Led</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-800/20 border border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-blue-400">1,000+</div>
+            <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Carriers Integrated</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-800/20 border border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">1.5L+</div>
+            <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Healthcare Records</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE COMPETENCIES -->
+    <section id="competencies" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <h2 class="text-xs uppercase font-bold tracking-widest text-cyan-400 mb-2">Technical & Functional Matrix</h2>
+          <p class="text-2xl sm:text-4xl font-extrabold text-white">End-to-End Delivery Toolkit</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-cyan-950/60 border border-cyan-800/40 flex items-center justify-center text-cyan-400 mb-5 text-xl">
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Requirements Engineering</h3>
+            <p class="text-sm text-slate-400 mb-4">Translating high-level business vision into actionable engineering deliverables.</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">BRD / FRD</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">User Stories</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Gap Analysis</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Process Flows</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">TCO Analysis</span>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-indigo-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center text-indigo-400 mb-5 text-xl">
+              <i class="fa-solid fa-cubes"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">ServiceNow Ecosystem</h3>
+            <p class="text-sm text-slate-400 mb-4">Domain mastery across ServiceNow modules, portals, and service operations workspaces.</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">SOM & CSM</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">ITSM & ITOM</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">HAM & FSM</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">CMDB</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">SOW Workspace</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">ATF</span>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-purple-950/60 border border-purple-800/40 flex items-center justify-center text-purple-400 mb-5 text-xl">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Applied AI & Automation</h3>
+            <p class="text-sm text-slate-400 mb-4">Leveraging LLMs and orchestration frameworks for streamlined workflows.</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Amazon Bedrock</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Claude MCP</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Now Assist</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Kiro Framework</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Prompt Structuring</span>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-blue-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-blue-950/60 border border-blue-800/40 flex items-center justify-center text-blue-400 mb-5 text-xl">
+              <i class="fa-solid fa-vial-circle-check"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">QA & Validation</h3>
+            <p class="text-sm text-slate-400 mb-4">Rigorous test oversight guaranteeing defect-free production cutovers.</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Postman API Testing</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">SQL Validation</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Playwright</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">UAT Coordination</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">K6 & Grafana</span>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-emerald-950/60 border border-emerald-800/40 flex items-center justify-center text-emerald-400 mb-5 text-xl">
+              <i class="fa-solid fa-people-roof"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Leadership & Governance</h3>
+            <p class="text-sm text-slate-400 mb-4">Directing sprint cadences, stakeholder alignment, and junior analyst mentorship.</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Scrum & Agile</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Backlog Grooming</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">BA Mentorship</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Release Coordination</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Stakeholder Sign-offs</span>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-amber-950/60 border border-amber-800/40 flex items-center justify-center text-amber-400 mb-5 text-xl">
+              <i class="fa-solid fa-shapes"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Platforms & Design</h3>
+            <p class="text-sm text-slate-400 mb-4">Prototyping and workflow modeling across modern business application suites.</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Microsoft Power Apps</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">SharePoint</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Figma & Visio</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">JIRA & Confluence</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Salesforce CRM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="case-studies" class="py-16 sm:py-24 bg-slate-900/30 border-t border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <h2 class="text-xs uppercase font-bold tracking-widest text-cyan-400 mb-2">Proven Track Record</h2>
+          <p class="text-2xl sm:text-4xl font-extrabold text-white">Featured Project Engagements</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Case 1 -->
+          <div class="bg-[#0e1526] border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800/60">Salesforce to ServiceNow SOM</span>
+                <span class="text-xs text-slate-400">Lead BA</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Enterprise Sales Order Management & Claude MCP</h3>
+              <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                Spearheaded the organizational migration from Salesforce CRM to ServiceNow SOM covering Lead, Account, Contact, and Opportunity lifecycles alongside commission and funding systems.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 mb-6">
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Collaborated with CTO; led 4 BAs, 15+ engineering squad members, and 20+ stakeholders.</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Integrated Now Assist and Claude MCP for prompt-driven pipeline updates in natural language.</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Designed executive dashboards tracking Closed-Won/Lost pipelines and sales rep commissions.</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs text-slate-400">
+              <span class="bg-slate-800/80 px-2 py-1 rounded">ServiceNow SOM</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Claude MCP</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Salesforce CRM</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Now Assist</span>
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div class="bg-[#0e1526] border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/60">Logistics & Supply Chain</span>
+                <span class="text-xs text-slate-400">Lead BA</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">MODE Global: 1,000+ Carrier Highway Integration</h3>
+              <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                Directed the full-scale platform integration replacing RMIS with Highway for carrier onboarding, compliance verification, and dispatch management for 1,000+ freight carriers.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 mb-6">
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Authored FRDs, process flow diagrams, and 30+ user stories across 2 high-velocity sprints.</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Built and executed 300+ test cases, including Postman API test runs and SQL backend queries.</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Achieved zero critical defects during final client UAT sign-off.</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs text-slate-400">
+              <span class="bg-slate-800/80 px-2 py-1 rounded">API Integration</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Postman</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">SQL</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">JIRA</span>
+            </div>
+          </div>
+
+          <!-- Case 3 -->
+          <div class="bg-[#0e1526] border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-950 text-purple-300 border border-purple-800/60">Healthcare & GenAI</span>
+                <span class="text-xs text-slate-400">Business Analyst</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Institute of Child Psychology: Amazon Bedrock Bot</h3>
+              <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                Managed requirements and delivery of an AI chatbot operating across web and mobile ecosystems to provide context-aware child mental health educational support.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 mb-6">
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Documented 50+ functional/non-functional requirements and managed JIRA backlog for 12–15 team members.</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Conducted design validation in Figma and supported load analysis using K6 and Grafana.</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Successfully launched on the Google Play Store and Apple App Store.</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs text-slate-400">
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Amazon Bedrock</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Mobile QA</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Figma</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">K6 / Grafana</span>
+            </div>
+          </div>
+
+          <!-- Case 4 -->
+          <div class="bg-[#0e1526] border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-950 text-blue-300 border border-blue-800/60">Harvard-Affiliated Healthcare</span>
+                <span class="text-xs text-slate-400">Business Analyst</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Mass General Brigham: Power Apps & 150K+ Records</h3>
+              <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                Streamlined administrative and clinical documentation workflows by designing custom Power Apps and validating migration integrity across 1.5 lakh+ critical healthcare records.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 mb-6">
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Drove 5+ client discovery workshops and authored comprehensive module-level FRDs.</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Executed SharePoint verification protocols across 150,000+ data entries before production cutover.</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Governed end-to-end regression suites and sign-off criteria under healthcare compliance policies.</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs text-slate-400">
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Power Apps</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">SharePoint</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Healthcare IT</span>
+              <span class="bg-slate-800/80 px-2 py-1 rounded">Data Validation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL TIMELINE -->
+    <section id="experience" class="py-16 sm:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14">
+          <h2 class="text-xs uppercase font-bold tracking-widest text-cyan-400 mb-2">Career Milestones</h2>
+          <p class="text-2xl sm:text-4xl font-extrabold text-white">Experience & Education</p>
+        </div>
+
+        <div class="relative border-l-2 border-slate-800 ml-4 sm:ml-8 space-y-12">
+          
+          <div class="relative pl-6 sm:pl-10">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 ring-4 ring-[#090d16]"></div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+              <h3 class="text-lg font-bold text-white">Lead Business Analyst</h3>
+              <span class="text-xs font-semibold text-cyan-400 bg-cyan-950/70 border border-cyan-800/40 px-2.5 py-0.5 rounded w-max mt-1 sm:mt-0">Feb 2026 - Present</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-300">Zeb (Sister company of Avasoft)</p>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Leads and mentors a team of 6 Business Analysts across active ServiceNow programs (SOM, ITSM, CSM, ITOM, HAM, Portals). Directs sprint planning, release coordination, and artifact review for cross-functional engineering squads of 12–15 members.
+            </p>
+          </div>
+
+          <div class="relative pl-6 sm:pl-10">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-[#090d16]"></div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+              <h3 class="text-lg font-bold text-white">Business Analyst</h3>
+              <span class="text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-0.5 rounded w-max mt-1 sm:mt-0">Oct 2023 - Jan 2026</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-300">Avasoft</p>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Primary billed functional BA for key North American accounts including Mass General Brigham, MODE Global, Harvard AA&D, and Canon Financial Services. Drove requirements elicitation, UAT sign-offs, and internal accelerators like Ava Cabs and Ava Migration Estimator.
+            </p>
+          </div>
+
+          <div class="relative pl-6 sm:pl-10">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-[#090d16]"></div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+              <h3 class="text-lg font-bold text-white">B.E. Computer Science & Engineering</h3>
+              <span class="text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-0.5 rounded w-max mt-1 sm:mt-0">2019 - 2023</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-300">Meenakshi College of Engineering</p>
+            <p class="text-xs text-slate-400 mt-1">Graduated with CGPA: 8.89 / 10</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 sm:py-24 bg-slate-900/40 border-t border-slate-800/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">Let's Connect</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto mb-10">
+          Interested in discussing enterprise business analysis, ServiceNow architectural roadmaps, or AI enablement? Feel free to reach out directly.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left max-w-2xl mx-auto mb-8">
+          <a href="mailto:yukeshramu111@gmail.com" class="p-4 rounded-xl bg-[#0e1628] border border-slate-800 hover:border-cyan-500 transition-colors flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-cyan-950 flex items-center justify-center text-cyan-400"><i class="fa-solid fa-envelope"></i></div>
+            <div class="overflow-hidden">
+              <div class="text-xs text-slate-400">Email</div>
+              <div class="text-xs sm:text-sm font-semibold text-white truncate">yukeshramu111@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="tel:+919962806059" class="p-4 rounded-xl bg-[#0e1628] border border-slate-800 hover:border-blue-500 transition-colors flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-blue-950 flex items-center justify-center text-blue-400"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="text-xs text-slate-400">Phone</div>
+              <div class="text-xs sm:text-sm font-semibold text-white">+91 9962806059</div>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-[#0e1628] border border-slate-800 hover:border-indigo-500 transition-colors flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-indigo-950 flex items-center justify-center text-indigo-400"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <div class="text-xs text-slate-400">LinkedIn</div>
+              <div class="text-xs sm:text-sm font-semibold text-white">/in/yukeshramu</div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-[#090d16] py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>&copy; 2026 Yukesh Ramu. All rights reserved.</div>
+      <div class="flex items-center gap-6">
+        <a href="#hero" class="hover:text-cyan-400 transition-colors">Back to Top</a>
+        <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.className = 'fa-solid fa-xmark text-xl';
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'fa-solid fa-bars text-xl';
+      }
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'fa-solid fa-bars text-xl';
+      });
+    });
+  </script>
+</body>
+</html>
