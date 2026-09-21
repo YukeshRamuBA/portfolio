@@ -74,8 +74,20 @@
       box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.15);
     }
 
-    .badge-glow {
-      box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.35);
+    /* Custom Scrollbar for Modal to enhance UX */
+    .modal-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .modal-scroll::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.5); 
+      border-radius: 8px;
+    }
+    .modal-scroll::-webkit-scrollbar-thumb {
+      background: rgba(56, 189, 248, 0.3); 
+      border-radius: 8px;
+    }
+    .modal-scroll::-webkit-scrollbar-thumb:hover {
+      background: rgba(56, 189, 248, 0.6); 
     }
 
     /* Scroll reveal animations */
@@ -97,7 +109,7 @@
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand Logo / Monogram -->
-        <a href="#hero" class="flex items-center space-x-3 group shrink-0">
+        <a href="#hero" class="flex items-center space-x-3 group shrink-0" aria-label="Home">
           <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-brand-accent flex items-center justify-center font-display font-extrabold text-slate-950 text-xl tracking-tighter shadow-glow group-hover:scale-105 transition-transform duration-300">
             YR
           </div>
@@ -163,7 +175,7 @@
           </h1>
 
           <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0">
-            Hi, I'm <strong class="text-white font-semibold">Yukesh Ramu</strong> — Lead Business Analyst with 3 years of deep enterprise IT experience. Specializing in end-to-end ServiceNow implementations (SOM, ITSM, CSM, ITOM, HAM), Generative AI platforms (Amazon Bedrock, Now Assist, Claude MCP), and mission-critical cloud workflows for leading US & Canadian clients.
+            Hi, I'm <strong class="text-white font-semibold">Yukesh Ramu</strong> — Results-driven Lead Business Analyst with 3 years of deep enterprise IT experience. Specializing in end-to-end ServiceNow implementations (SOM, ITSM, CSM, FSM, ITOM, HAM), Generative AI platforms (Amazon Bedrock, Now Assist, Claude MCP), and mission-critical cloud workflows for leading US & Canadian clients.
           </p>
 
           <!-- Key Quick Highlights / Badges -->
@@ -189,19 +201,17 @@
               <i class="fa-regular fa-envelope text-brand-400"></i>
               <span>Get In Touch</span>
             </a>
-            <a href="https://www.linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="w-[52px] h-[52px] shrink-0 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition-all flex items-center justify-center">
+            <a href="https://www.linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-[52px] h-[52px] shrink-0 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition-all flex items-center justify-center">
               <i class="fa-brands fa-linkedin-in text-xl text-sky-400"></i>
             </a>
           </div>
         </div>
 
-        <!-- Right Visual Column (Executive Photo Frame with Badges) -->
+        <!-- Right Visual Column -->
         <div class="lg:col-span-5 flex justify-center relative reveal active">
-          <!-- Ambient decorative backlight behind photo -->
           <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 via-sky-500/20 to-purple-500/20 rounded-3xl blur-2xl opacity-70 animate-pulse"></div>
 
           <div class="relative w-72 sm:w-80 md:w-96">
-            <!-- Framed Image Container -->
             <div class="relative rounded-3xl overflow-hidden p-1.5 bg-gradient-to-b from-slate-600/50 via-slate-800/40 to-emerald-500/40 shadow-2xl">
               <div class="rounded-[22px] overflow-hidden bg-slate-900 relative group" style="aspect-ratio: 4/5;">
                 <img 
@@ -210,7 +220,6 @@
                   class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   onerror="this.onerror=null; this.src='https://placehold.co/600x750/0f172a/38bdf8?text=Yukesh+Ramu'"
                 />
-                <!-- Subtle gradient overlay at bottom of photo -->
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
                 
                 <div class="absolute bottom-4 left-4 right-4 text-center">
@@ -220,7 +229,7 @@
               </div>
             </div>
 
-            <!-- Floating Badge 1: Top Right -->
+            <!-- Floating Badges -->
             <div class="absolute -top-4 -right-4 glass-card px-4 py-2.5 rounded-2xl flex items-center space-x-3 shadow-xl border border-emerald-500/30 animate-bounce" style="animation-duration: 4s;">
               <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm">
                 <i class="fa-solid fa-shield-halved"></i>
@@ -231,7 +240,6 @@
               </div>
             </div>
 
-            <!-- Floating Badge 2: Bottom Left -->
             <div class="absolute -bottom-5 -left-4 glass-card px-4 py-2.5 rounded-2xl flex items-center space-x-3 shadow-xl border border-sky-500/30">
               <div class="w-8 h-8 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400 text-sm">
                 <i class="fa-solid fa-microchip"></i>
@@ -322,7 +330,7 @@
             Strategic Problem Solver & Functional Anchor
           </h3>
           <p class="text-slate-300 leading-relaxed mb-4 text-sm sm:text-base">
-            I specialize in unpacking ambiguous enterprise challenges and orchestrating seamless technical deliveries. With 3 years of hands-on experience guiding Fortune-standard programs across healthcare, logistics, food & beverage, and maritime fleets in the US and Canada, I bridge the gap between high-level client expectations and precise agile execution.
+            I am a results-driven Lead Business Analyst specializing in unpacking ambiguous enterprise challenges and orchestrating seamless technical deliveries. With 3 years of hands-on experience guiding Fortune-standard programs across healthcare, logistics, food & beverage, and maritime fleets, I bridge the gap between high-level client expectations and precise agile execution.
           </p>
           <p class="text-slate-300 leading-relaxed mb-6 text-sm sm:text-base">
             Beyond standard Business Analysis, I actively incorporate applied Generative AI—leveraging <strong>Claude</strong>, <strong>Copilot</strong>, and <strong>Now Assist</strong> for requirements analysis and documentation, alongside AI-powered automated testing via <strong>Playwright</strong> and the <strong>Kiro framework</strong> to supercharge sprint cadence and eliminate regressions.
@@ -422,13 +430,23 @@
             <i class="fa-solid fa-clipboard-check"></i>
           </div>
           <h3 class="text-lg font-bold text-white mb-3">BA Core & Product Ownership</h3>
-          <ul class="space-y-2 text-xs text-slate-300">
+          <ul class="space-y-2 text-xs text-slate-300 mb-4">
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Requirements Gathering (BRD / FRD)</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> User Story Authoring & INVEST Criteria</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Gap Analysis & Process Flow Mapping</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> UAT Coordination & Stakeholder Sign-offs</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Change Management & BA Artifact Review</li>
           </ul>
+          
+          <div class="pt-4 border-t border-slate-800/80">
+            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Soft Skills</h4>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-1 bg-emerald-500/10 text-[10px] rounded text-emerald-400 border border-emerald-500/20">Stakeholder Communication</span>
+              <span class="px-2 py-1 bg-emerald-500/10 text-[10px] rounded text-emerald-400 border border-emerald-500/20">Cross-functional Collaboration</span>
+              <span class="px-2 py-1 bg-emerald-500/10 text-[10px] rounded text-emerald-400 border border-emerald-500/20">Ownership & Accountability</span>
+              <span class="px-2 py-1 bg-emerald-500/10 text-[10px] rounded text-emerald-400 border border-emerald-500/20">Adaptability</span>
+            </div>
+          </div>
         </div>
 
         <!-- Category 2: ServiceNow Platform -->
@@ -825,6 +843,94 @@
           </div>
         </div>
 
+        <!-- Project 7: Harvard AA&D (Added from Resume) -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between reveal" data-category="enterprise">
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30">
+                Enterprise Integration
+              </span>
+              <span class="text-xs text-slate-400">Oct 2023 – Mar 2024</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 hover:text-brand-400 transition-colors">
+              Harvard AA&D: Alumni Management System
+            </h3>
+            <p class="text-xs font-medium text-emerald-400 mb-3">Harvard University | BA</p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Supported the rollout of a comprehensive alumni management system, driving requirements and data validation protocols.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-300 mb-5 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-rose-400"></i>
+                <span>SharePoint data validation & QA</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-clipboard-check text-sky-400"></i>
+                <span>Managed UAT support and requirements gathering</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">SharePoint</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Power Apps</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">UAT</span>
+            </div>
+          </div>
+
+          <div class="px-7 py-4 bg-slate-900/70 border-t border-slate-800/80 flex items-center justify-between">
+            <button onclick="openModal('project7')" class="text-xs font-bold text-brand-400 hover:text-brand-300 flex items-center gap-1.5">
+              <span>View Deep Dive</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            </button>
+            <span class="text-[11px] text-slate-400">Education Sector</span>
+          </div>
+        </div>
+
+        <!-- Project 8: Canon Financial Services (Added from Resume) -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between reveal" data-category="enterprise">
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                Financial Services
+              </span>
+              <span class="text-xs text-slate-400">Dec 2023 – Apr 2024</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 hover:text-brand-400 transition-colors">
+              Canon Financial Services: Portal Revamp
+            </h3>
+            <p class="text-xs font-medium text-emerald-400 mb-3">Canon Financial | BA</p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Led UI/UX validation and regression testing for a significant redesign of a critical financial services web portal.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-300 mb-5 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-desktop text-cyan-400"></i>
+                <span>Cross-browser UI/UX validation</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-bug-slash text-emerald-400"></i>
+                <span>Managed regression testing & defect tracking</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">UI/UX QA</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Regression Testing</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Defect Tracking</span>
+            </div>
+          </div>
+
+          <div class="px-7 py-4 bg-slate-900/70 border-t border-slate-800/80 flex items-center justify-between">
+            <button onclick="openModal('project8')" class="text-xs font-bold text-brand-400 hover:text-brand-300 flex items-center gap-1.5">
+              <span>View Deep Dive</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            </button>
+            <span class="text-[11px] text-slate-400">FinTech</span>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -1047,18 +1153,18 @@
           <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-medium text-slate-300 mb-1.5">Your Name *</label>
-                <input type="text" id="senderName" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-brand-400 transition-colors" />
+                <label for="senderName" class="block text-xs font-medium text-slate-300 mb-1.5">Your Name *</label>
+                <input type="text" id="senderName" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-all" />
               </div>
               <div>
-                <label class="block text-xs font-medium text-slate-300 mb-1.5">Your Email *</label>
-                <input type="email" id="senderEmail" required placeholder="jane@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-brand-400 transition-colors" />
+                <label for="senderEmail" class="block text-xs font-medium text-slate-300 mb-1.5">Your Email *</label>
+                <input type="email" id="senderEmail" required placeholder="jane@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-all" />
               </div>
             </div>
 
             <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1.5">Engagement / Opportunity Type</label>
-              <select id="senderSubject" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-brand-400 transition-colors">
+              <label for="senderSubject" class="block text-xs font-medium text-slate-300 mb-1.5">Engagement / Opportunity Type</label>
+              <select id="senderSubject" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-all">
                 <option>Lead Business Analyst Role</option>
                 <option>ServiceNow Implementation Engagement</option>
                 <option>Generative AI / Chatbot Product Consulting</option>
@@ -1068,8 +1174,8 @@
             </div>
 
             <div>
-              <label class="block text-xs font-medium text-slate-300 mb-1.5">Project Overview / Message *</label>
-              <textarea id="senderMessage" required rows="4" placeholder="Tell me about your initiative, timeline, and how I can help..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-brand-400 transition-colors"></textarea>
+              <label for="senderMessage" class="block text-xs font-medium text-slate-300 mb-1.5">Project Overview / Message *</label>
+              <textarea id="senderMessage" required rows="4" placeholder="Tell me about your initiative, timeline, and how I can help..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-all"></textarea>
             </div>
 
             <button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-400 to-emerald-400 hover:from-brand-500 hover:to-emerald-500 text-slate-950 font-bold text-sm tracking-wide shadow-glow transition-all flex items-center justify-center gap-2">
@@ -1094,16 +1200,16 @@
       </div>
       <p>© 2026 Yukesh Ramu. Crafted for Enterprise Excellence.</p>
       <div class="flex items-center space-x-4 text-slate-400 text-sm">
-        <a href="https://www.linkedin.com/in/yukeshramu" target="_blank" class="hover:text-sky-400 transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="mailto:yukeshramu111@gmail.com" class="hover:text-brand-400 transition-colors" title="Email"><i class="fa-regular fa-envelope"></i></a>
-        <a href="tel:+919962806059" class="hover:text-emerald-400 transition-colors" title="Call"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://www.linkedin.com/in/yukeshramu" target="_blank" aria-label="LinkedIn Profile" class="hover:text-sky-400 transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:yukeshramu111@gmail.com" aria-label="Email Me" class="hover:text-brand-400 transition-colors" title="Email"><i class="fa-regular fa-envelope"></i></a>
+        <a href="tel:+919962806059" aria-label="Call Me" class="hover:text-emerald-400 transition-colors" title="Call"><i class="fa-solid fa-phone"></i></a>
       </div>
     </div>
   </footer>
 
   <div id="projectModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
-      <button onclick="closeModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto modal-scroll p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeModal()" aria-label="Close modal window" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
@@ -1114,13 +1220,13 @@
   </div>
 
   <!-- Toast notification element -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden glass-card border border-emerald-500/50 bg-slate-900/95 text-white px-5 py-3.5 rounded-2xl shadow-glow flex items-center gap-3 text-xs font-semibold">
+  <div id="toast" aria-live="polite" class="fixed bottom-6 right-6 z-50 hidden glass-card border border-emerald-500/50 bg-slate-900/95 text-white px-5 py-3.5 rounded-2xl shadow-glow flex items-center gap-3 text-xs font-semibold">
     <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
     <span id="toastMsg">Action completed successfully!</span>
   </div>
 
   <script>
-    // Modal Deep Dive Data Dictionary - UPDATED TO MATCH RESUME METRICS
+    // Modal Deep Dive Data Dictionary - NOW FULLY MATCHING THE RESUME PROJECTS
     const projectData = {
       project1: {
         title: "Salesforce CRM to ServiceNow - Sales Order Management (SOM)",
@@ -1207,6 +1313,32 @@
           "Supported deployment and post-production processes for fleet-wide asset tracking."
         ],
         tools: ["ServiceNow HAM", "ServiceNow ITSM", "CSM", "Agile/Scrum", "Asset Tracking"]
+      },
+      project7: {
+        title: "Harvard AA&D - SharePoint & Power Apps",
+        client: "Avasoft (Harvard University)",
+        role: "Business Analyst",
+        timeline: "Oct 2023 - Mar 2024",
+        challenge: "System implementation and support for a highly visible Harvard alumni management system.",
+        solution: "Led direct requirements gathering and facilitated communication between stakeholders and the technical team.",
+        impact: [
+          "Managed comprehensive SharePoint data validation to ensure strict data compliance and integrity.",
+          "Successfully provided UAT support, ensuring all functional criteria were met before rollout."
+        ],
+        tools: ["SharePoint", "Power Apps", "UAT", "Data Validation", "Requirement Elicitation"]
+      },
+      project8: {
+        title: "Canon Financial Services - Portal Revamp",
+        client: "Avasoft (Canon Financial)",
+        role: "Business Analyst",
+        timeline: "Dec 2023 - Apr 2024",
+        challenge: "Complete redesign and deployment of a financial services web portal targeting enhanced user experience.",
+        solution: "Spearheaded the UI/UX validation process, matching functional delivery against initial design prototypes.",
+        impact: [
+          "Coordinated cross-browser testing and detailed regression testing.",
+          "Identified and tracked critical defects through resolution for a flawless portal launch."
+        ],
+        tools: ["UI/UX Validation", "Cross-browser Testing", "Regression Testing", "Defect Tracking"]
       }
     };
 
