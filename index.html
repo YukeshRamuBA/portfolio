@@ -3,25 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yukesh Ramu | Lead Business Analyst</title>
+  <title>Yukesh Ramu | Lead Business Analyst & Enterprise Solutions</title>
   
+  <!-- Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
-  <!-- Google Fonts: Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              dark: '#030712',
+              card: '#0f172a',
+              accent: '#38bdf8'
+            }
+          },
+          boxShadow: {
+            glow: '0 0 40px -10px rgba(16, 185, 129, 0.3)',
+            'glow-cyan': '0 0 35px -8px rgba(56, 189, 248, 0.35)',
           }
         }
       }
@@ -29,499 +46,1331 @@
   </script>
 
   <style>
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #0b0f19; }
-    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #334155; }
-    .glow-blob { filter: blur(100px); opacity: 0.15; pointer-events: none; }
+    /* Custom luxury background grid & glow effects */
+    .bg-mesh {
+      background-color: #030712;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(99, 102, 241, 0.08) 0px, transparent 60%);
+    }
+
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(56, 189, 248, 0.3);
+      box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.15);
+    }
+
+    .badge-glow {
+      box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.35);
+    }
+
+    /* Scroll reveal animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
+<body class="bg-mesh text-slate-200 font-sans antialiased selection:bg-brand-500 selection:text-black">
 
-<body class="bg-[#090d16] text-slate-200 antialiased selection:bg-cyan-500 selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
-
-  <!-- Ambient Glow Effects -->
-  <div class="fixed top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full glow-blob -z-10"></div>
-  <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-purple-600 rounded-full glow-blob -z-10"></div>
-
-  <!-- NAVIGATION BAR -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#090d16]/80 border-b border-slate-800/80">
+  <nav class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 sm:h-20">
+      <div class="flex items-center justify-between h-20">
         
-        <!-- Logo -->
-        <a href="#hero" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-200">
+        <!-- Brand Logo / Monogram -->
+        <a href="#hero" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-brand-accent flex items-center justify-center font-display font-extrabold text-slate-950 text-xl tracking-tighter shadow-glow group-hover:scale-105 transition-transform duration-300">
             YR
           </div>
           <div>
-            <span class="text-base sm:text-lg font-bold tracking-tight text-white block leading-tight">Yukesh Ramu</span>
-            <span class="text-xs text-slate-400 font-medium hidden sm:block">Lead Business Analyst</span>
+            <span class="font-display font-bold text-lg text-white group-hover:text-brand-400 transition-colors">Yukesh Ramu</span>
+            <span class="block text-[11px] text-slate-400 uppercase tracking-widest font-medium">Lead Business Analyst</span>
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <a href="#summary" class="hover:text-cyan-400 transition-colors">About</a>
-          <a href="#competencies" class="hover:text-cyan-400 transition-colors">Core Skills</a>
-          <a href="#case-studies" class="hover:text-cyan-400 transition-colors">Case Studies</a>
-          <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
-          <a href="#contact" class="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-95 shadow-md shadow-cyan-500/20 transition-all">Get in Touch</a>
-        </nav>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#about" class="text-slate-300 hover:text-brand-400 transition-colors">About</a>
+          <a href="#skills" class="text-slate-300 hover:text-brand-400 transition-colors">Competencies</a>
+          <a href="#projects" class="text-slate-300 hover:text-brand-400 transition-colors">Case Studies</a>
+          <a href="#experience" class="text-slate-300 hover:text-brand-400 transition-colors">Experience</a>
+          <a href="#education" class="text-slate-300 hover:text-brand-400 transition-colors">Education</a>
+          <a href="#contact" class="text-slate-300 hover:text-brand-400 transition-colors">Contact</a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#contact" class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-950 bg-gradient-to-r from-brand-400 to-emerald-400 hover:from-brand-500 hover:to-emerald-500 transition-all duration-300 shadow-glow hover:shadow-glow-cyan hover:-translate-y-0.5">
+            Hire / Connect
+          </a>
+        </div>
 
         <!-- Mobile Menu Toggle Button -->
-        <div class="flex md:hidden">
-          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 focus:outline-none" aria-label="Toggle Navigation">
-            <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
-          </button>
-        </div>
+        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="md:hidden p-2.5 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white focus:outline-none">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
       </div>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#0e1424] border-b border-slate-800 px-4 pt-3 pb-5 space-y-2">
-      <a href="#summary" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">About</a>
-      <a href="#competencies" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Core Skills</a>
-      <a href="#case-studies" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Case Studies</a>
-      <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Experience</a>
-      <a href="#contact" class="block px-3 py-2 text-center rounded-md bg-cyan-500 text-white font-semibold mt-2">Get in Touch</a>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden glass-nav border-t border-slate-800 px-6 py-5 space-y-4">
+      <a href="#about" class="mobile-nav-link block text-base text-slate-300 hover:text-brand-400 py-1">About</a>
+      <a href="#skills" class="mobile-nav-link block text-base text-slate-300 hover:text-brand-400 py-1">Competencies</a>
+      <a href="#projects" class="mobile-nav-link block text-base text-slate-300 hover:text-brand-400 py-1">Case Studies</a>
+      <a href="#experience" class="mobile-nav-link block text-base text-slate-300 hover:text-brand-400 py-1">Experience</a>
+      <a href="#education" class="mobile-nav-link block text-base text-slate-300 hover:text-brand-400 py-1">Education</a>
+      <a href="#contact" class="mobile-nav-link block text-base text-slate-300 hover:text-brand-400 py-1">Contact</a>
+      <div class="pt-3">
+        <a href="#contact" class="mobile-nav-link block text-center w-full py-3 rounded-xl bg-brand-400 text-slate-950 font-bold text-sm tracking-wide">
+          Connect With Me
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="hero" class="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content Column -->
+        <div class="lg:col-span-7 space-y-7 text-center lg:text-left reveal active">
+          <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Available for Enterprise BA & Lead Roles</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.12]">
+            Transforming Enterprise Operations with <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-400 bg-clip-text text-transparent">ServiceNow & Applied AI</span>.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0">
+            Hi, I'm <strong class="text-white font-semibold">Yukesh Ramu</strong> — Lead Business Analyst with 3 years of deep enterprise IT experience. Specializing in end-to-end ServiceNow implementations (SOM, ITSM, CSM, ITOM, HAM), Generative AI platforms (Amazon Bedrock, Now Assist, Claude MCP), and mission-critical cloud workflows for leading US & Canadian clients.
+          </p>
+
+          <!-- Key Quick Highlights / Badges -->
+          <div class="flex flex-wrap gap-2.5 justify-center lg:justify-start pt-1 text-xs">
+            <span class="px-3.5 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/80 text-slate-300 flex items-center gap-2">
+              <i class="fa-solid fa-users-gear text-brand-400"></i> Mentoring 6 BAs
+            </span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/80 text-slate-300 flex items-center gap-2">
+              <i class="fa-solid fa-sitemap text-sky-400"></i> Leading 12–15 Cross-Functional Squads
+            </span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/80 text-slate-300 flex items-center gap-2">
+              <i class="fa-solid fa-brain text-purple-400"></i> Claude MCP & Bedrock Chatbots
+            </span>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-3">
+            <a href="#projects" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-500 to-emerald-500 text-slate-950 font-bold text-sm tracking-wide shadow-glow hover:scale-105 transition-all flex items-center gap-2">
+              <span>Explore Case Studies</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#contact" class="px-7 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-white font-semibold text-sm tracking-wide hover:scale-105 transition-all flex items-center gap-2">
+              <i class="fa-regular fa-envelope text-brand-400"></i>
+              <span>Get In Touch</span>
+            </a>
+            <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="px-4 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition-all flex items-center justify-center">
+              <i class="fa-brands fa-linkedin-in text-lg text-sky-400"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Visual Column (Executive Photo Frame with Badges) -->
+        <div class="lg:col-span-5 flex justify-center relative reveal active">
+          <!-- Ambient decorative backlight behind photo -->
+          <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 via-sky-500/20 to-purple-500/20 rounded-3xl blur-2xl opacity-70 animate-pulse"></div>
+
+          <div class="relative w-72 sm:w-80 md:w-96">
+            <!-- Framed Image Container -->
+            <div class="relative rounded-3xl overflow-hidden p-1.5 bg-gradient-to-b from-slate-600/50 via-slate-800/40 to-emerald-500/40 shadow-2xl">
+              <div class="rounded-[22px] overflow-hidden bg-slate-900 aspect-[4/5] relative group">
+                <img 
+                  src="profile.jpeg" 
+                  alt="Yukesh Ramu - Lead Business Analyst" 
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  onerror="this.onerror=null; this.src='https://placehold.co/600x750/0f172a/38bdf8?text=Yukesh+Ramu'"
+                />
+                <!-- Subtle gradient overlay at bottom of photo -->
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                  <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold block">Chennai, India</span>
+                  <span class="text-sm font-semibold text-white">Lead Business Analyst @ Zeb</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badge 1: Top Right -->
+            <div class="absolute -top-4 -right-4 glass-card px-4 py-2.5 rounded-2xl flex items-center space-x-3 shadow-xl border border-emerald-500/30 animate-bounce" style="animation-duration: 4s;">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-400 font-medium block">ServiceNow</span>
+                <span class="text-xs font-bold text-white">SOM / ITSM / CSM</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Bottom Left -->
+            <div class="absolute -bottom-5 -left-4 glass-card px-4 py-2.5 rounded-2xl flex items-center space-x-3 shadow-xl border border-sky-500/30">
+              <div class="w-8 h-8 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400 text-sm">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-400 font-medium block">Applied GenAI</span>
+                <span class="text-xs font-bold text-white">Bedrock & Claude MCP</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
   </header>
 
-  <main class="flex-grow">
-    
-    <!-- HERO SECTION -->
-    <section id="hero" class="relative pt-12 sm:pt-20 pb-16 sm:pb-24 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
-          
-          <!-- Bio & Heading -->
-          <div class="w-full lg:w-3/5 text-center lg:text-left space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/70 border border-cyan-800/50 text-cyan-400 text-xs sm:text-sm font-medium">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              Available for Strategic BA & Lead Roles
-            </div>
-
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
-              Architecting Enterprise Value with <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">ServiceNow & AI</span>
-            </h1>
-
-            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Lead Business Analyst with 3 years of enterprise IT experience directing requirements, multi-sprint deliveries, and cross-functional teams of 12–15 across North America. Specialist in ServiceNow (SOM, ITSM, CSM, ITOM, HAM) and Applied Generative AI integrations.
-            </p>
-
-            <!-- Buttons -->
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-              <a href="#case-studies" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all text-sm sm:text-base flex items-center gap-2">
-                Explore Case Studies <i class="fa-solid fa-arrow-down text-xs"></i>
-              </a>
-              <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-200 font-semibold transition-all text-sm sm:text-base flex items-center gap-2">
-                <i class="fa-brands fa-linkedin text-blue-400"></i> LinkedIn Profile
-              </a>
-            </div>
-
-            <!-- Quick Contacts Row -->
-            <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-400 border-t border-slate-800/80">
-              <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-cyan-400"></i> Chennai, India</span>
-              <a href="mailto:yukeshramu111@gmail.com" class="hover:text-cyan-300 flex items-center gap-2"><i class="fa-solid fa-envelope text-cyan-400"></i> yukeshramu111@gmail.com</a>
-              <a href="tel:+919962806059" class="hover:text-cyan-300 flex items-center gap-2"><i class="fa-solid fa-phone text-cyan-400"></i> +91 9962806059</a>
-            </div>
-          </div>
-
-          <!-- Profile Photo Frame -->
-          <div class="w-full lg:w-2/5 flex justify-center items-center">
-            <div class="relative w-64 h-72 sm:w-80 sm:h-96 group">
-              <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-3xl blur-md opacity-40 group-hover:opacity-75 transition duration-500"></div>
-              
-              <div class="relative w-full h-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-700/80 shadow-2xl flex items-center justify-center">
-                <img 
-                  id="profile-img" 
-                  src="profile.jpg"
-                  alt="Yukesh Ramu - Lead Business Analyst" 
-                  class="w-full h-full object-cover object-top"
-                  loading="eager"
-                  onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Yukesh+Ramu&background=0284c7&color=fff&size=512';"
-                />
-              </div>
-
-              <!-- Floating Highlights -->
-              <div class="absolute -bottom-4 -left-4 bg-[#0e1628]/95 backdrop-blur-md border border-slate-700/80 px-3 py-2 rounded-xl shadow-lg flex items-center gap-2 text-xs font-semibold text-slate-200">
-                <i class="fa-solid fa-users text-cyan-400"></i> Leads 6 BAs
-              </div>
-              <div class="absolute -top-3 -right-3 bg-[#0e1628]/95 backdrop-blur-md border border-slate-700/80 px-3 py-2 rounded-xl shadow-lg flex items-center gap-2 text-xs font-semibold text-slate-200">
-                <i class="fa-solid fa-microchip text-indigo-400"></i> Claude MCP & Bedrock
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- KEY STATS METRICS -->
-    <section class="border-y border-slate-800/80 bg-slate-900/40 py-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div class="p-4 rounded-xl bg-slate-800/20 border border-slate-800">
-            <div class="text-3xl sm:text-4xl font-extrabold text-cyan-400">3+</div>
-            <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Years Enterprise IT</div>
-          </div>
-          <div class="p-4 rounded-xl bg-slate-800/20 border border-slate-800">
-            <div class="text-3xl sm:text-4xl font-extrabold text-indigo-400">6</div>
-            <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">BAs Mentored & Led</div>
-          </div>
-          <div class="p-4 rounded-xl bg-slate-800/20 border border-slate-800">
-            <div class="text-3xl sm:text-4xl font-extrabold text-blue-400">1,000+</div>
-            <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Carriers Integrated</div>
-          </div>
-          <div class="p-4 rounded-xl bg-slate-800/20 border border-slate-800">
-            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">1.5L+</div>
-            <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Healthcare Records</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CORE COMPETENCIES -->
-    <section id="competencies" class="py-16 sm:py-24">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <h2 class="text-xs uppercase font-bold tracking-widest text-cyan-400 mb-2">Technical & Functional Matrix</h2>
-          <p class="text-2xl sm:text-4xl font-extrabold text-white">End-to-End Delivery Toolkit</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors">
-            <div class="w-12 h-12 rounded-xl bg-cyan-950/60 border border-cyan-800/40 flex items-center justify-center text-cyan-400 mb-5 text-xl">
-              <i class="fa-solid fa-diagram-project"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Requirements Engineering</h3>
-            <p class="text-sm text-slate-400 mb-4">Translating high-level business vision into actionable engineering deliverables.</p>
-            <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">BRD / FRD</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">User Stories</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Gap Analysis</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Process Flows</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">TCO Analysis</span>
-            </div>
-          </div>
-
-          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-indigo-500/40 transition-colors">
-            <div class="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center text-indigo-400 mb-5 text-xl">
-              <i class="fa-solid fa-cubes"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">ServiceNow Ecosystem</h3>
-            <p class="text-sm text-slate-400 mb-4">Domain mastery across ServiceNow modules, portals, and service operations workspaces.</p>
-            <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">SOM & CSM</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">ITSM & ITOM</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">HAM & FSM</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">CMDB</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">SOW Workspace</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">ATF</span>
-            </div>
-          </div>
-
-          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
-            <div class="w-12 h-12 rounded-xl bg-purple-950/60 border border-purple-800/40 flex items-center justify-center text-purple-400 mb-5 text-xl">
-              <i class="fa-solid fa-brain"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Applied AI & Automation</h3>
-            <p class="text-sm text-slate-400 mb-4">Leveraging LLMs and orchestration frameworks for streamlined workflows.</p>
-            <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Amazon Bedrock</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Claude MCP</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Now Assist</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Kiro Framework</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Prompt Structuring</span>
-            </div>
-          </div>
-
-          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-blue-500/40 transition-colors">
-            <div class="w-12 h-12 rounded-xl bg-blue-950/60 border border-blue-800/40 flex items-center justify-center text-blue-400 mb-5 text-xl">
-              <i class="fa-solid fa-vial-circle-check"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">QA & Validation</h3>
-            <p class="text-sm text-slate-400 mb-4">Rigorous test oversight guaranteeing defect-free production cutovers.</p>
-            <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Postman API Testing</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">SQL Validation</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Playwright</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">UAT Coordination</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">K6 & Grafana</span>
-            </div>
-          </div>
-
-          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/40 transition-colors">
-            <div class="w-12 h-12 rounded-xl bg-emerald-950/60 border border-emerald-800/40 flex items-center justify-center text-emerald-400 mb-5 text-xl">
-              <i class="fa-solid fa-people-roof"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Leadership & Governance</h3>
-            <p class="text-sm text-slate-400 mb-4">Directing sprint cadences, stakeholder alignment, and junior analyst mentorship.</p>
-            <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Scrum & Agile</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Backlog Grooming</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">BA Mentorship</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Release Coordination</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Stakeholder Sign-offs</span>
-            </div>
-          </div>
-
-          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-amber-500/40 transition-colors">
-            <div class="w-12 h-12 rounded-xl bg-amber-950/60 border border-amber-800/40 flex items-center justify-center text-amber-400 mb-5 text-xl">
-              <i class="fa-solid fa-shapes"></i>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">Platforms & Design</h3>
-            <p class="text-sm text-slate-400 mb-4">Prototyping and workflow modeling across modern business application suites.</p>
-            <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Microsoft Power Apps</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">SharePoint</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Figma & Visio</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">JIRA & Confluence</span>
-              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded-md">Salesforce CRM</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASE STUDIES -->
-    <section id="case-studies" class="py-16 sm:py-24 bg-slate-900/30 border-t border-slate-800/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-10 border-y border-slate-800/80 bg-slate-950/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
         
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <h2 class="text-xs uppercase font-bold tracking-widest text-cyan-400 mb-2">Proven Track Record</h2>
-          <p class="text-2xl sm:text-4xl font-extrabold text-white">Featured Project Engagements</p>
+        <div class="p-3">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <span class="counter" data-target="3">0</span><span class="text-brand-400">+</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1 font-medium">Years IT Experience</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- Case 1 -->
-          <div class="bg-[#0e1526] border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300">
-            <div>
-              <div class="flex items-center justify-between gap-4 mb-4">
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800/60">Salesforce to ServiceNow SOM</span>
-                <span class="text-xs text-slate-400">Lead BA</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Enterprise Sales Order Management & Claude MCP</h3>
-              <p class="text-sm text-slate-300 mb-4 leading-relaxed">
-                Spearheaded the organizational migration from Salesforce CRM to ServiceNow SOM covering Lead, Account, Contact, and Opportunity lifecycles alongside commission and funding systems.
-              </p>
-              <ul class="text-xs text-slate-400 space-y-2 mb-6">
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Collaborated with CTO; led 4 BAs, 15+ engineering squad members, and 20+ stakeholders.</li>
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Integrated Now Assist and Claude MCP for prompt-driven pipeline updates in natural language.</li>
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Designed executive dashboards tracking Closed-Won/Lost pipelines and sales rep commissions.</li>
-              </ul>
-            </div>
-            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs text-slate-400">
-              <span class="bg-slate-800/80 px-2 py-1 rounded">ServiceNow SOM</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Claude MCP</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Salesforce CRM</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Now Assist</span>
-            </div>
+        <div class="p-3">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <span class="counter" data-target="6">0</span>
           </div>
-
-          <!-- Case 2 -->
-          <div class="bg-[#0e1526] border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300">
-            <div>
-              <div class="flex items-center justify-between gap-4 mb-4">
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/60">Logistics & Supply Chain</span>
-                <span class="text-xs text-slate-400">Lead BA</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">MODE Global: 1,000+ Carrier Highway Integration</h3>
-              <p class="text-sm text-slate-300 mb-4 leading-relaxed">
-                Directed the full-scale platform integration replacing RMIS with Highway for carrier onboarding, compliance verification, and dispatch management for 1,000+ freight carriers.
-              </p>
-              <ul class="text-xs text-slate-400 space-y-2 mb-6">
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Authored FRDs, process flow diagrams, and 30+ user stories across 2 high-velocity sprints.</li>
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Built and executed 300+ test cases, including Postman API test runs and SQL backend queries.</li>
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Achieved zero critical defects during final client UAT sign-off.</li>
-              </ul>
-            </div>
-            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs text-slate-400">
-              <span class="bg-slate-800/80 px-2 py-1 rounded">API Integration</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Postman</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">SQL</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">JIRA</span>
-            </div>
-          </div>
-
-          <!-- Case 3 -->
-          <div class="bg-[#0e1526] border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300">
-            <div>
-              <div class="flex items-center justify-between gap-4 mb-4">
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-950 text-purple-300 border border-purple-800/60">Healthcare & GenAI</span>
-                <span class="text-xs text-slate-400">Business Analyst</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Institute of Child Psychology: Amazon Bedrock Bot</h3>
-              <p class="text-sm text-slate-300 mb-4 leading-relaxed">
-                Managed requirements and delivery of an AI chatbot operating across web and mobile ecosystems to provide context-aware child mental health educational support.
-              </p>
-              <ul class="text-xs text-slate-400 space-y-2 mb-6">
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Documented 50+ functional/non-functional requirements and managed JIRA backlog for 12–15 team members.</li>
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Conducted design validation in Figma and supported load analysis using K6 and Grafana.</li>
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Successfully launched on the Google Play Store and Apple App Store.</li>
-              </ul>
-            </div>
-            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs text-slate-400">
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Amazon Bedrock</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Mobile QA</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Figma</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">K6 / Grafana</span>
-            </div>
-          </div>
-
-          <!-- Case 4 -->
-          <div class="bg-[#0e1526] border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300">
-            <div>
-              <div class="flex items-center justify-between gap-4 mb-4">
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-950 text-blue-300 border border-blue-800/60">Harvard-Affiliated Healthcare</span>
-                <span class="text-xs text-slate-400">Business Analyst</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Mass General Brigham: Power Apps & 150K+ Records</h3>
-              <p class="text-sm text-slate-300 mb-4 leading-relaxed">
-                Streamlined administrative and clinical documentation workflows by designing custom Power Apps and validating migration integrity across 1.5 lakh+ critical healthcare records.
-              </p>
-              <ul class="text-xs text-slate-400 space-y-2 mb-6">
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Drove 5+ client discovery workshops and authored comprehensive module-level FRDs.</li>
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Executed SharePoint verification protocols across 150,000+ data entries before production cutover.</li>
-                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cyan-400 mt-0.5"></i> Governed end-to-end regression suites and sign-off criteria under healthcare compliance policies.</li>
-              </ul>
-            </div>
-            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs text-slate-400">
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Power Apps</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">SharePoint</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Healthcare IT</span>
-              <span class="bg-slate-800/80 px-2 py-1 rounded">Data Validation</span>
-            </div>
-          </div>
-
+          <p class="text-xs text-slate-400 mt-1 font-medium">BAs Led & Mentored</p>
         </div>
+
+        <div class="p-3">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <span class="counter" data-target="15">0</span><span class="text-sky-400">+</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1 font-medium">Cross-Functional Squads</p>
+        </div>
+
+        <div class="p-3">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <span class="counter" data-target="1000">0</span><span class="text-emerald-400">+</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1 font-medium">Carriers Integrated</p>
+        </div>
+
+        <div class="p-3">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <span class="counter" data-target="150">0</span><span class="text-brand-400">k+</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1 font-medium">Healthcare Records</p>
+        </div>
+
+        <div class="p-3">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-emerald-400 tracking-tight">
+            <span>0</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1 font-medium">Critical UAT Defects</p>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROFESSIONAL TIMELINE -->
-    <section id="experience" class="py-16 sm:py-24">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="about" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+        <span class="text-xs uppercase tracking-widest text-brand-400 font-bold">Executive Profile</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+          Bridging Business Strategy, Technical Architecture & AI
+        </h2>
+        <div class="w-16 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         
-        <div class="text-center mb-14">
-          <h2 class="text-xs uppercase font-bold tracking-widest text-cyan-400 mb-2">Career Milestones</h2>
-          <p class="text-2xl sm:text-4xl font-extrabold text-white">Experience & Education</p>
+        <!-- Left narrative card -->
+        <div class="lg:col-span-7 glass-card p-8 rounded-3xl relative overflow-hidden reveal">
+          <div class="absolute top-0 right-0 p-8 opacity-5">
+            <i class="fa-solid fa-diagram-project text-9xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-compass text-brand-400"></i>
+            Strategic Problem Solver & Functional Anchor
+          </h3>
+          <p class="text-slate-300 leading-relaxed mb-4 text-sm sm:text-base">
+            I specialize in unpacking ambiguous enterprise challenges and orchestrating seamless technical deliveries. With 3 years of hands-on experience guiding Fortune-standard programs across healthcare, logistics, food & beverage, and maritime fleets in the US and Canada, I bridge the gap between high-level client expectations and precise agile execution.
+          </p>
+          <p class="text-slate-300 leading-relaxed mb-6 text-sm sm:text-base">
+            Beyond standard Business Analysis, I actively incorporate applied Generative AI—pioneering solutions using <strong>Now Assist</strong>, <strong>Claude Model Context Protocol (MCP)</strong>, and <strong>Amazon Bedrock</strong>, as well as AI-powered automated testing via <strong>Kiro</strong> to supercharge sprint cadence and eliminate regressions.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-800">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center text-brand-400">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block">Based in</span>
+                <span class="text-sm font-semibold text-white">Chennai, India</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center text-sky-400">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block">Education</span>
+                <span class="text-sm font-semibold text-white">B.E. CSE (8.89 / 10 CGPA)</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="relative border-l-2 border-slate-800 ml-4 sm:ml-8 space-y-12">
+        <!-- Right Pillars list -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
           
-          <div class="relative pl-6 sm:pl-10">
-            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 ring-4 ring-[#090d16]"></div>
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
-              <h3 class="text-lg font-bold text-white">Lead Business Analyst</h3>
-              <span class="text-xs font-semibold text-cyan-400 bg-cyan-950/70 border border-cyan-800/40 px-2.5 py-0.5 rounded w-max mt-1 sm:mt-0">Feb 2026 - Present</span>
+          <div class="glass-card p-6 rounded-2xl reveal">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-lg flex-shrink-0">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-base">BA Team Leadership</h4>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">
+                  Directly managing and coaching a squad of 6 Business Analysts; establishing standards for FRD/BRD authoring, user stories, and QA acceptance benchmarks.
+                </p>
+              </div>
             </div>
-            <p class="text-sm font-semibold text-slate-300">Zeb (Sister company of Avasoft)</p>
-            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-              Leads and mentors a team of 6 Business Analysts across active ServiceNow programs (SOM, ITSM, CSM, ITOM, HAM, Portals). Directs sprint planning, release coordination, and artifact review for cross-functional engineering squads of 12–15 members.
-            </p>
           </div>
 
-          <div class="relative pl-6 sm:pl-10">
-            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-[#090d16]"></div>
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
-              <h3 class="text-lg font-bold text-white">Business Analyst</h3>
-              <span class="text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-0.5 rounded w-max mt-1 sm:mt-0">Oct 2023 - Jan 2026</span>
+          <div class="glass-card p-6 rounded-2xl reveal">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-lg flex-shrink-0">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-base">ServiceNow Expertise</h4>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">
+                  In-depth mastery of SOM, ITSM, CSM, ITOM, HAM, CMDB, Employee Center, Workspace configurator, and automated testing with ServiceNow ATF.
+                </p>
+              </div>
             </div>
-            <p class="text-sm font-semibold text-slate-300">Avasoft</p>
-            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-              Primary billed functional BA for key North American accounts including Mass General Brigham, MODE Global, Harvard AA&D, and Canon Financial Services. Drove requirements elicitation, UAT sign-offs, and internal accelerators like Ava Cabs and Ava Migration Estimator.
-            </p>
           </div>
 
-          <div class="relative pl-6 sm:pl-10">
-            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-[#090d16]"></div>
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
-              <h3 class="text-lg font-bold text-white">B.E. Computer Science & Engineering</h3>
-              <span class="text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-0.5 rounded w-max mt-1 sm:mt-0">2019 - 2023</span>
+          <div class="glass-card p-6 rounded-2xl reveal">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-lg flex-shrink-0">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-base">Agentic AI & Engineering</h4>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">
+                  Structuring contextual prompt architectures, MCP connectors with Claude for CRM updates, and Amazon Bedrock conversational workflows.
+                </p>
+              </div>
             </div>
-            <p class="text-sm font-semibold text-slate-300">Meenakshi College of Engineering</p>
-            <p class="text-xs text-slate-400 mt-1">Graduated with CGPA: 8.89 / 10</p>
           </div>
 
         </div>
 
       </div>
-    </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-16 sm:py-24 bg-slate-900/40 border-t border-slate-800/80">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">Let's Connect</h2>
-        <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto mb-10">
-          Interested in discussing enterprise business analysis, ServiceNow architectural roadmaps, or AI enablement? Feel free to reach out directly.
+    </div>
+  </section>
+
+  <section id="skills" class="py-20 bg-slate-950/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+        <span class="text-xs uppercase tracking-widest text-sky-400 font-bold">Skills & Tech Stack</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+          Comprehensive Competency Matrix
+        </h2>
+        <p class="text-slate-400 text-sm mt-3">From functional elicitation to API regression testing and generative AI workflows.</p>
+        <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Category 1: BA Core & Product -->
+        <div class="glass-card p-6 rounded-2xl reveal hover:-translate-y-1 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-3">BA Core & Product Ownership</h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Requirements Gathering (BRD / FRD)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> User Story Authoring & INVEST Criteria</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Gap Analysis & Process Flow Mapping</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> UAT Coordination & Stakeholder Sign-offs</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Total Cost of Ownership (TCO) Analysis</li>
+          </ul>
+        </div>
+
+        <!-- Category 2: ServiceNow Platform -->
+        <div class="glass-card p-6 rounded-2xl reveal hover:-translate-y-1 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-3">ServiceNow Ecosystem</h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Sales Order Management (SOM)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> ITSM, CSM, ITOM & FSM</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Hardware Asset Management (HAM)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Employee Center, SOW & CSM Workspaces</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Automated Test Framework (ATF) & CMDB</li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Applied AI & Modern Tech -->
+        <div class="glass-card p-6 rounded-2xl reveal hover:-translate-y-1 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-3">AI & Agentic Workflows</h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Amazon Bedrock Chatbot Architecture</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> ServiceNow Now Assist GenAI</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Claude MCP (Model Context Protocol)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Kiro Framework AI Test Generation</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Prompt Structuring & Context Injection</li>
+          </ul>
+        </div>
+
+        <!-- Category 4: Delivery & Leadership -->
+        <div class="glass-card p-6 rounded-2xl reveal hover:-translate-y-1 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-people-roof"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-3">Leadership & Agile Delivery</h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Mentoring & Managing 6 BAs</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Leading 12-15 Member Cross-Functional Squads</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Sprint Planning & Backlog Refinement</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Release Coordination & Go-Live Cutover</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Executive & CTO Level Stakeholder Alignment</li>
+          </ul>
+        </div>
+
+        <!-- Category 5: QA, Testing & Validation -->
+        <div class="glass-card p-6 rounded-2xl reveal hover:-translate-y-1 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-vial-circle-check"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-3">Testing & Validation</h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> API Testing (Postman) & SQL Queries</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> End-to-End & Regression Test Suites</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Playwright & Automated Scripting</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Performance Load Testing (K6 & Grafana)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-red-400"></i> Defect Triage & Root Cause Investigation</li>
+          </ul>
+        </div>
+
+        <!-- Category 6: Tools & Platforms -->
+        <div class="glass-card p-6 rounded-2xl reveal hover:-translate-y-1 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-toolbox"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-3">Enterprise Tools</h3>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">JIRA</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">Confluence</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">Figma</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">MS Visio</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">Power Apps</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">SharePoint</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">Postman</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">AWS Bedrock</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">SQL</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">Claude</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">Copilot</span>
+            <span class="px-2.5 py-1 rounded bg-slate-800 text-[11px] text-slate-300 font-medium">Kiro</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-12 reveal">
+        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold">Proven Track Record</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+          Featured Enterprise Case Studies
+        </h2>
+        <p class="text-slate-400 text-sm mt-3">
+          Explore end-to-end deliverables across ServiceNow migrations, AI implementations, and mission-critical cloud systems.
         </p>
+        <div class="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+      </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left max-w-2xl mx-auto mb-8">
-          <a href="mailto:yukeshramu111@gmail.com" class="p-4 rounded-xl bg-[#0e1628] border border-slate-800 hover:border-cyan-500 transition-colors flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-cyan-950 flex items-center justify-center text-cyan-400"><i class="fa-solid fa-envelope"></i></div>
-            <div class="overflow-hidden">
-              <div class="text-xs text-slate-400">Email</div>
-              <div class="text-xs sm:text-sm font-semibold text-white truncate">yukeshramu111@gmail.com</div>
-            </div>
-          </a>
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 reveal">
+        <button class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-brand-500 text-slate-950 shadow-glow" data-filter="all">All Projects</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-300 hover:bg-slate-700" data-filter="servicenow">ServiceNow</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-300 hover:bg-slate-700" data-filter="ai">AI & Chatbots</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-300 hover:bg-slate-700" data-filter="enterprise">Enterprise Integrations</button>
+      </div>
 
-          <a href="tel:+919962806059" class="p-4 rounded-xl bg-[#0e1628] border border-slate-800 hover:border-blue-500 transition-colors flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-blue-950 flex items-center justify-center text-blue-400"><i class="fa-solid fa-phone"></i></div>
-            <div>
-              <div class="text-xs text-slate-400">Phone</div>
-              <div class="text-xs sm:text-sm font-semibold text-white">+91 9962806059</div>
-            </div>
-          </a>
+      <!-- Projects Grid -->
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-[#0e1628] border border-slate-800 hover:border-indigo-500 transition-colors flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-indigo-950 flex items-center justify-center text-indigo-400"><i class="fa-brands fa-linkedin"></i></div>
-            <div>
-              <div class="text-xs text-slate-400">LinkedIn</div>
-              <div class="text-xs sm:text-sm font-semibold text-white">/in/yukeshramu</div>
+        <!-- Project 1: Salesforce to ServiceNow SOM -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between reveal" data-category="servicenow ai">
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                ServiceNow SOM & AI
+              </span>
+              <span class="text-xs text-slate-400">Mar 2025 – Aug 2026</span>
             </div>
-          </a>
+            <h3 class="text-xl font-bold text-white mb-2 hover:text-brand-400 transition-colors">
+              Salesforce CRM to ServiceNow SOM Modernization
+            </h3>
+            <p class="text-xs font-medium text-emerald-400 mb-3">Zeb Internal Platform | Lead BA</p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Spearheaded end-to-end Sales Order Management transition covering Lead, Account, Contact, and Opportunity lifecycles, enhanced with ServiceNow Now Assist and Claude MCP.
+            </p>
+            
+            <div class="space-y-2 text-xs text-slate-300 mb-5 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-crown text-amber-400"></i>
+                <span>Led 4 BAs, 15+ engineering squad & 20+ stakeholders</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-robot text-purple-400"></i>
+                <span>Natural language CRM updates via Claude MCP</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-chart-line text-sky-400"></i>
+                <span>Executive dashboards for P&L, deals & commissions</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">ServiceNow SOM</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Claude MCP</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Now Assist</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Salesforce</span>
+            </div>
+          </div>
+
+          <div class="px-7 py-4 bg-slate-900/70 border-t border-slate-800/80 flex items-center justify-between">
+            <button onclick="openModal('project1')" class="text-xs font-bold text-brand-400 hover:text-brand-300 flex items-center gap-1.5">
+              <span>View Deep Dive</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            </button>
+            <span class="text-[11px] text-slate-400">US & Offshore Teams</span>
+          </div>
+        </div>
+
+        <!-- Project 2: MODE Global Highway Integration -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between reveal" data-category="enterprise">
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30">
+                Logistics & Freight
+              </span>
+              <span class="text-xs text-slate-400">Nov 2024 – Jul 2025</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 hover:text-brand-400 transition-colors">
+              MODE Global: 1,000+ Carrier Highway Integration
+            </h3>
+            <p class="text-xs font-medium text-emerald-400 mb-3">US Freight Brokerage | Lead BA</p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Led full-lifecycle BA & QA for replacing legacy RMIS with Highway, driving carrier onboarding, compliance validations, and workflow automation.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-300 mb-5 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-truck-fast text-sky-400"></i>
+                <span>Seamless transition for 1,000+ freight carriers</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-vial text-emerald-400"></i>
+                <span>Designed & executed 300+ test cases (Postman/SQL)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-check text-brand-400"></i>
+                <span>Zero critical defects during UAT sign-off</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Highway API</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Postman</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">SQL</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">JIRA</span>
+            </div>
+          </div>
+
+          <div class="px-7 py-4 bg-slate-900/70 border-t border-slate-800/80 flex items-center justify-between">
+            <button onclick="openModal('project2')" class="text-xs font-bold text-brand-400 hover:text-brand-300 flex items-center gap-1.5">
+              <span>View Deep Dive</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            </button>
+            <span class="text-[11px] text-slate-400">US Enterprise Client</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Institute of Child Psychology AI Chatbot -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between reveal" data-category="ai">
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                Applied Generative AI
+              </span>
+              <span class="text-xs text-slate-400">Sep 2025 – Mar 2026</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 hover:text-brand-400 transition-colors">
+              Institute of Child Psychology: Bedrock Chatbot
+            </h3>
+            <p class="text-xs font-medium text-emerald-400 mb-3">US Child Mental Health | BA</p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Architected functional specifications for an Amazon Bedrock-powered web & mobile chatbot delivering personalized, context-aware psychoeducational responses.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-300 mb-5 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-file-signature text-purple-400"></i>
+                <span>Documented 50+ FRD/NFR requirements & flows</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-mobile-screen text-emerald-400"></i>
+                <span>App Store & Google Play Store release management</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-gauge-high text-sky-400"></i>
+                <span>Performance verification via K6 & Grafana</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Amazon Bedrock</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">AWS Transcribe</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">K6 / Grafana</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Figma</span>
+            </div>
+          </div>
+
+          <div class="px-7 py-4 bg-slate-900/70 border-t border-slate-800/80 flex items-center justify-between">
+            <button onclick="openModal('project3')" class="text-xs font-bold text-brand-400 hover:text-brand-300 flex items-center gap-1.5">
+              <span>View Deep Dive</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            </button>
+            <span class="text-[11px] text-slate-400">Cross-Functional Squad</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Synergy Flavours - ServiceNow Implementation -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between reveal" data-category="servicenow">
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30">
+                ServiceNow ITSM & ITOM
+              </span>
+              <span class="text-xs text-slate-400">Jan 2026 – Mar 2026</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 hover:text-brand-400 transition-colors">
+              Synergy Flavours: ITSM, CSM & ITOM Implementation
+            </h3>
+            <p class="text-xs font-medium text-emerald-400 mb-3">US Food & Beverage Leader | BA</p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Delivered current-to-future state transition across Incident, Request, Case, SOW Workspace, Employee Center, CI classification, CMDB, JIRA & HR integrations.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-300 mb-5 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-gears text-teal-400"></i>
+                <span>Automated Test Framework (ATF) + Kiro AI scripts</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-arrows-split-up-and-left text-sky-400"></i>
+                <span>Catalog taxonomy, CMDB & HR onboarding flows</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">ServiceNow ITSM</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">CSM Workspace</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">ATF</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Kiro AI</span>
+            </div>
+          </div>
+
+          <div class="px-7 py-4 bg-slate-900/70 border-t border-slate-800/80 flex items-center justify-between">
+            <button onclick="openModal('project4')" class="text-xs font-bold text-brand-400 hover:text-brand-300 flex items-center gap-1.5">
+              <span>View Deep Dive</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            </button>
+            <span class="text-[11px] text-slate-400">US Manufacturer</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Mass General Brigham - Healthcare Automation -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between reveal" data-category="enterprise">
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                Healthcare Workflows
+              </span>
+              <span class="text-xs text-slate-400">Apr 2024 – Aug 2025</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 hover:text-brand-400 transition-colors">
+              Mass General Brigham: Clinical Workflow Automation
+            </h3>
+            <p class="text-xs font-medium text-emerald-400 mb-3">Harvard-Affiliated Healthcare | BA</p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Streamlined hospital administrative workflows and validated data accuracy across 150,000+ patient and clinical records using Power Apps and SharePoint.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-300 mb-5 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-database text-blue-400"></i>
+                <span>Audited 1.5 Lakh (150,000+) clinical records</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-user-doctor text-emerald-400"></i>
+                <span>5+ discovery workshops with medical stakeholders</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Power Apps</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">SharePoint</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Figma</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">UAT</span>
+            </div>
+          </div>
+
+          <div class="px-7 py-4 bg-slate-900/70 border-t border-slate-800/80 flex items-center justify-between">
+            <button onclick="openModal('project5')" class="text-xs font-bold text-brand-400 hover:text-brand-300 flex items-center gap-1.5">
+              <span>View Deep Dive</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            </button>
+            <span class="text-[11px] text-slate-400">Healthcare Leader</span>
+          </div>
+        </div>
+
+        <!-- Project 6: American Commercial Barge Line - ServiceNow HAM -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between reveal" data-category="servicenow">
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                ServiceNow HAM & Fleet
+              </span>
+              <span class="text-xs text-slate-400">Sep 2025 – Jan 2026</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 hover:text-brand-400 transition-colors">
+              ACBL: ServiceNow Hardware Asset Management
+            </h3>
+            <p class="text-xs font-medium text-emerald-400 mb-3">US Marine Transportation | BA</p>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Led IT asset lifecycle tracking, maintenance schedules, and hardware status governance for a leading commercial marine fleet operator in North America.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-300 mb-5 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-ship text-indigo-400"></i>
+                <span>Fleet-wide hardware asset tracking & governance</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-list-check text-sky-400"></i>
+                <span>FRD documentation, workflow logic & UAT sign-off</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">ServiceNow HAM</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">ITSM</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">CSM</span>
+              <span class="px-2 py-1 bg-slate-800/90 text-[10px] rounded text-slate-300">Asset Tracking</span>
+            </div>
+          </div>
+
+          <div class="px-7 py-4 bg-slate-900/70 border-t border-slate-800/80 flex items-center justify-between">
+            <button onclick="openModal('project6')" class="text-xs font-bold text-brand-400 hover:text-brand-300 flex items-center gap-1.5">
+              <span>View Deep Dive</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            </button>
+            <span class="text-[11px] text-slate-400">Marine Logistics</span>
+          </div>
         </div>
 
       </div>
-    </section>
 
-  </main>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-800 bg-[#090d16] py-8 text-center text-xs text-slate-400">
+  <section id="experience" class="py-20 bg-slate-950/50 relative border-t border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+        <span class="text-xs uppercase tracking-widest text-brand-400 font-bold">Career Trajectory</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+          Professional Work Experience
+        </h2>
+        <div class="w-16 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="relative border-l-2 border-slate-800 ml-4 md:ml-32 space-y-12">
+
+        <!-- Role 1: Zeb -->
+        <div class="relative pl-8 md:pl-10 reveal">
+          <!-- Timeline Node -->
+          <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-slate-900 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 text-xs shadow-glow">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+
+          <div class="md:absolute md:-left-36 md:top-2 text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2 md:mb-0">
+            Feb 2026 – Present
+          </div>
+
+          <div class="glass-card p-6 md:p-8 rounded-2xl">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h3 class="text-xl font-bold text-white">Lead Business Analyst</h3>
+              <span class="px-3 py-1 rounded bg-emerald-500/20 text-emerald-300 text-xs font-semibold">Current Role</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-300 mb-4">Zeb (Sister company of Avasoft) • Chennai, India</p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-400 mt-1 text-xs"></i>
+                <span><strong>Team Leadership:</strong> Lead and mentor a team of 6 Business Analysts across complex ServiceNow and cloud initiatives, reviewing functional artifacts, establishing standards, and unblocking delivery bottlenecks.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-400 mt-1 text-xs"></i>
+                <span><strong>Primary Client BA:</strong> Serving as the main BA anchor across 5 US client engagements covering AI Chatbot development, ITAM, ServiceNow CSM, ITSM, Portals, HAM, and marine fleet tracking.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-400 mt-1 text-xs"></i>
+                <span><strong>Squad Orchestration:</strong> Independently guiding cross-functional teams of 12–15 members across sprint planning, daily standups, stakeholder sign-offs, and release coordination.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2: Avasoft -->
+        <div class="relative pl-8 md:pl-10 reveal">
+          <!-- Timeline Node -->
+          <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-slate-900 border-2 border-sky-400 flex items-center justify-center text-sky-400 text-xs">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+
+          <div class="md:absolute md:-left-36 md:top-2 text-xs font-bold text-sky-400 uppercase tracking-wider mb-2 md:mb-0">
+            Oct 2023 – Jan 2026
+          </div>
+
+          <div class="glass-card p-6 md:p-8 rounded-2xl">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h3 class="text-xl font-bold text-white">Business Analyst</h3>
+              <span class="px-3 py-1 rounded bg-sky-500/20 text-sky-300 text-xs font-semibold">2 Years 4 Mos</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-300 mb-4">Avasoft • Chennai, India</p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-xs"></i>
+                <span><strong>US Enterprise Engagements:</strong> Delivered end-to-end BA and QA across 6 major US client projects and 2 internal platform initiatives in healthcare, freight logistics, and financial services.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-xs"></i>
+                <span><strong>Dedicated Billed BA:</strong> Primary billed functional analyst for Mass General Brigham (Harvard-affiliated healthcare) and MODE Global (US logistics), owning discovery, FRD documentation, and UAT sign-offs.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-xs"></i>
+                <span><strong>Internal Productivity Tools:</strong> Co-created <strong class="text-white">Ava Cabs</strong> (enterprise corporate cab management system) and <strong class="text-white">Ava Migration Estimator</strong> (project effort estimation tool).</span>
+              </li>
+            </ul>
+
+            <!-- Additional Client Engagements Sub-block -->
+            <div class="mt-5 pt-4 border-t border-slate-800">
+              <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Additional Client Highlights:</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
+                  <strong class="text-white block font-medium">Harvard AA&D (Oct 2023 - Mar 2024)</strong>
+                  <span>Requirements elicitation & SharePoint data verification for Harvard alumni management system.</span>
+                </div>
+                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
+                  <strong class="text-white block font-medium">Canon Financial Services (Dec 2023 - Apr 2024)</strong>
+                  <span>UI/UX validation, cross-browser regression testing & defect management for financial services portal revamp.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+        <span class="text-xs uppercase tracking-widest text-purple-400 font-bold">Academic Foundation</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+          Education & Engineering Discipline
+        </h2>
+        <div class="w-16 h-1 bg-purple-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto reveal">
+        <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col sm:flex-row items-center sm:items-start gap-6 border-purple-500/20">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-purple-500 to-indigo-600 flex items-center justify-center text-white text-3xl shadow-xl flex-shrink-0">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+
+          <div class="text-center sm:text-left flex-1">
+            <div class="flex flex-wrap items-center justify-center sm:justify-between gap-2 mb-1">
+              <h3 class="text-xl font-bold text-white">Bachelor of Engineering (B.E.)</h3>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-extrabold border border-emerald-500/30">
+                CGPA: 8.89 / 10
+              </span>
+            </div>
+            <p class="text-base text-brand-400 font-medium mb-1">Computer Science & Engineering</p>
+            <p class="text-slate-300 text-sm mb-3">Meenakshi College of Engineering, Chennai • 2019 – 2023</p>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Graduated with distinction with high academic standing. Built a solid foundation in computer architecture, databases, software engineering lifecycles, and system design that today powers technical communication with enterprise developers and architects.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-slate-950/80 relative border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold">Let's Connect</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+          Ready to Elevate Your Product Delivery?
+        </h2>
+        <p class="text-slate-400 text-sm mt-3">
+          Whether you're planning a complex ServiceNow deployment, structuring an enterprise AI chatbot, or seeking a proven Lead BA to drive high-velocity agile delivery.
+        </p>
+        <div class="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left: Direct Contact Information -->
+        <div class="lg:col-span-5 space-y-6 reveal">
+          <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 font-medium block">Direct Email</span>
+              <a href="mailto:yukeshramu111@gmail.com" class="text-sm font-semibold text-white hover:text-brand-400 transition-colors">
+                yukeshramu111@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 font-medium block">Phone & WhatsApp</span>
+              <a href="tel:+919962806059" class="text-sm font-semibold text-white hover:text-sky-400 transition-colors">
+                +91 9962806059
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 font-medium block">LinkedIn Profile</span>
+              <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-purple-400 transition-colors">
+                linkedin.com/in/yukeshramu
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 font-medium block">Location</span>
+              <span class="text-sm font-semibold text-white">Chennai, Tamil Nadu, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Message Form -->
+        <div class="lg:col-span-7 glass-card p-8 rounded-3xl reveal">
+          <h3 class="text-xl font-bold text-white mb-2">Send a Message</h3>
+          <p class="text-xs text-slate-400 mb-6">Fill out the quick note below, and I'll respond within 24 business hours.</p>
+
+          <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1.5">Your Name *</label>
+                <input type="text" id="senderName" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-brand-400 transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1.5">Your Email *</label>
+                <input type="email" id="senderEmail" required placeholder="jane@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-brand-400 transition-colors" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Engagement / Opportunity Type</label>
+              <select id="senderSubject" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-brand-400 transition-colors">
+                <option>Lead Business Analyst Role</option>
+                <option>ServiceNow Implementation Engagement</option>
+                <option>Generative AI / Chatbot Product Consulting</option>
+                <option>Freelance / Contract Requirement</option>
+                <option>General Networking</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Project Overview / Message *</label>
+              <textarea id="senderMessage" required rows="4" placeholder="Tell me about your initiative, timeline, and how I can help..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-brand-400 transition-colors"></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-400 to-emerald-400 hover:from-brand-500 hover:to-emerald-500 text-slate-950 font-bold text-sm tracking-wide shadow-glow transition-all flex items-center justify-center gap-2">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>&copy; 2026 Yukesh Ramu. All rights reserved.</div>
-      <div class="flex items-center gap-6">
-        <a href="#hero" class="hover:text-cyan-400 transition-colors">Back to Top</a>
-        <a href="https://linkedin.com/in/yukeshramu" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-lg bg-brand-500 text-slate-950 font-bold flex items-center justify-center text-xs">YR</div>
+        <span class="text-slate-300 font-semibold">Yukesh Ramu</span>
+        <span class="text-slate-600">•</span>
+        <span>Lead Business Analyst</span>
+      </div>
+      <p>© 2026 Yukesh Ramu. Crafted for Enterprise Excellence.</p>
+      <div class="flex items-center space-x-4 text-slate-400 text-sm">
+        <a href="https://linkedin.com/in/yukeshramu" target="_blank" class="hover:text-sky-400 transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:yukeshramu111@gmail.com" class="hover:text-brand-400 transition-colors" title="Email"><i class="fa-regular fa-envelope"></i></a>
+        <a href="tel:+919962806059" class="hover:text-emerald-400 transition-colors" title="Call"><i class="fa-solid fa-phone"></i></a>
       </div>
     </div>
   </footer>
 
-  <script>
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
+  <div id="projectModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
 
-    mobileBtn.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.contains('hidden');
-      if (isHidden) {
-        mobileMenu.classList.remove('hidden');
-        menuIcon.className = 'fa-solid fa-xmark text-xl';
-      } else {
-        mobileMenu.classList.add('hidden');
-        menuIcon.className = 'fa-solid fa-bars text-xl';
+      <div id="modalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification element -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden glass-card border border-emerald-500/50 bg-slate-900/95 text-white px-5 py-3.5 rounded-2xl shadow-glow flex items-center gap-3 text-xs font-semibold">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+    <span id="toastMsg">Action completed successfully!</span>
+  </div>
+
+  <script>
+    // Modal Deep Dive Data Dictionary
+    const projectData = {
+      project1: {
+        title: "Salesforce CRM to ServiceNow SOM Modernization",
+        client: "Zeb Internal Enterprise Platform",
+        role: "Lead Business Analyst (Leading 4 BAs, 15+ member squad)",
+        timeline: "Mar 2025 - Aug 2026",
+        challenge: "The commercial organization relied on disjointed legacy Salesforce processes that impeded lead velocity, obscured commission transparency, and hindered staffing allocations across multiple business units.",
+        solution: "Collaborated directly with the CTO to define the full architecture across ServiceNow Sales Order Management (SOM) and CSM. Architected AI-powered workflows using ServiceNow Now Assist and Claude integrated through Model Context Protocol (MCP) to automate account/deal progression through natural conversational prompts.",
+        impact: [
+          "Coordinated 20+ stakeholders across sales leadership, solution architects, and engineering.",
+          "Delivered end-to-end user stories, acceptance criteria, and executive performance dashboards.",
+          "Empowered sales representatives to query and update CRM entities in natural language with zero disruption to active pipeline."
+        ],
+        tools: ["ServiceNow SOM & CSM", "Salesforce CRM", "Claude MCP", "Now Assist", "JIRA", "Figma", "AWS"]
+      },
+      project2: {
+        title: "MODE Global: 1,000+ Carrier Highway Integration",
+        client: "MODE Global (US Freight Brokerage)",
+        role: "Lead Business Analyst & QA Lead",
+        timeline: "Nov 2024 - Jul 2025",
+        challenge: "MODE Global needed to transition from their legacy RMIS platform to the modern Highway ecosystem to streamline carrier onboarding, credential compliance, and continuous risk monitoring without freight downtime.",
+        solution: "Led end-to-end requirements gathering workshops, created FRDs and user flow diagrams across 2 sprints (30+ user stories). Personally designed and executed 300+ test scenarios, incorporating Postman API validations and SQL backend data audits.",
+        impact: [
+          "Seamless transition across 1,000+ active freight carriers.",
+          "Achieved ZERO critical defects during final client User Acceptance Testing (UAT).",
+          "Cut manual compliance review time significantly with automated API checks."
+        ],
+        tools: ["Highway Integration", "JIRA", "Postman", "SQL", "Figma", "Visio", "Agile/Scrum"]
+      },
+      project3: {
+        title: "Institute of Child Psychology: Bedrock AI Chatbot",
+        client: "Institute of Child Psychology (US Child Mental Health)",
+        role: "Functional Business Analyst",
+        timeline: "Sep 2025 - Mar 2026",
+        challenge: "Parents and educators required rapid, context-sensitive child psychology guidance across ICP's vast library of articles, courses, and multimedia assets via web and native mobile apps.",
+        solution: "Authored 50+ functional and non-functional specifications for an Amazon Bedrock-powered generative AI chatbot. Structured context injection protocols and safety guardrails. Facilitated JIRA backlogs for 12-15 cross-functional team members across UI/UX, mobile devs, and cloud engineers.",
+        impact: [
+          "Successfully coordinated deployment to Apple App Store and Google Play Store.",
+          "Conducted end-to-end device testing, cross-browser validation, and load testing via K6 and Grafana.",
+          "Maintained ongoing TCO analysis and Confluence architecture docs."
+        ],
+        tools: ["Amazon Bedrock", "AWS Transcribe", "K6", "Grafana", "JIRA", "Confluence", "Figma"]
+      },
+      project4: {
+        title: "Synergy Flavours: ServiceNow ITSM, CSM & ITOM Implementation",
+        client: "Synergy Flavours (US Food & Beverage)",
+        role: "Business Analyst",
+        timeline: "Jan 2026 - Mar 2026",
+        challenge: "Legacy service delivery tools lacked visibility across CMDB, asset configuration, customer case management, and employee onboarding lifecycles.",
+        solution: "Translated complex business requirements into ServiceNow workflows across Incident, Request, Knowledge, Case Management, SOW Workspace, Employee Center, and HR onboarding. Performed ServiceNow Automated Test Framework (ATF) regression runs using Kiro-assisted AI test generation.",
+        impact: [
+          "Unified ITSM, CSM, and ITOM workspaces under one streamlined interface.",
+          "Automated catalog items, SLA triggers, and JIRA cross-system escalations.",
+          "Conducted client walkthroughs and guided UAT defect clearance to production."
+        ],
+        tools: ["ServiceNow ITSM/CSM/ITOM", "Employee Center", "ATF", "Kiro AI", "CMDB", "JIRA"]
+      },
+      project5: {
+        title: "Mass General Brigham: Clinical Workflow Automation",
+        client: "Mass General Brigham (Harvard-affiliated US Healthcare)",
+        role: "Business Analyst",
+        timeline: "Apr 2024 - Sep 2024 | Mar 2025 - Aug 2025",
+        challenge: "Managing extensive manual clinical paperwork and maintaining strict data fidelity across 150,000+ patient records.",
+        solution: "Facilitated 5+ stakeholder workshops with hospital clinical and administrative staff. Authored FRDs and designed interactive Power Apps and SharePoint workflows. Governed massive data validation passes to safeguard record integrity.",
+        impact: [
+          "Validated data integrity across 1.5 Lakh (150,000+) medical records prior to go-live.",
+          "Eliminated clinical intake bottlenecks with low-code Power Apps solutions.",
+          "Delivered full regression passes and achieved prompt UAT sign-offs."
+        ],
+        tools: ["Power Apps", "SharePoint", "Figma", "Visio", "Healthcare Workflows", "Agile/Scrum"]
+      },
+      project6: {
+        title: "American Commercial Barge Line: ServiceNow HAM",
+        client: "ACBL (US Marine Transportation)",
+        role: "Business Analyst",
+        timeline: "Sep 2025 - Jan 2026",
+        challenge: "Managing hardware assets, onboard vessel computers, and lifecycle tracking for a large-scale commercial barge and marine fleet operator.",
+        solution: "Owned requirements documentation and facilitated workflow sessions with IT and marine operations teams. Defined asset state transitions, warranty tracking, and lifecycle disposals in ServiceNow Hardware Asset Management (HAM).",
+        impact: [
+          "Delivered centralized IT asset visibility across fleet depots and marine vessels.",
+          "Executed comprehensive test cases and managed prompt defect resolution through post-production support."
+        ],
+        tools: ["ServiceNow HAM", "ServiceNow ITSM", "CSM", "Agile/Scrum", "Asset Tracking"]
+      }
+    };
+
+    // Modal Handlers
+    function openModal(projectId) {
+      const data = projectData[projectId];
+      if (!data) return;
+
+      const modalContent = document.getElementById('modalContent');
+      modalContent.innerHTML = `
+        <span class="text-xs uppercase font-bold text-brand-400 tracking-wider block mb-1">${data.client}</span>
+        <h3 class="text-2xl font-bold text-white mb-2">${data.title}</h3>
+        <div class="flex flex-wrap gap-2 text-xs text-slate-400 mb-6 pb-4 border-b border-slate-800">
+          <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-user-gear mr-1"></i>${data.role}</span>
+          <span>•</span>
+          <span><i class="fa-regular fa-clock mr-1"></i>${data.timeline}</span>
+        </div>
+
+        <div class="space-y-4 text-xs sm:text-sm text-slate-300 mb-6">
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">The Challenge</h4>
+            <p class="leading-relaxed bg-slate-950/60 p-3.5 rounded-xl border border-slate-800">${data.challenge}</p>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">The Solution</h4>
+            <p class="leading-relaxed bg-slate-950/60 p-3.5 rounded-xl border border-slate-800">${data.solution}</p>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Key Outcomes & Deliverables</h4>
+            <ul class="space-y-2">
+              ${data.impact.map(item => `
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-brand-400 mt-1 text-xs"></i>
+                  <span>${item}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800">
+          <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Technologies Used:</span>
+          <div class="flex flex-wrap gap-1.5">
+            ${data.tools.map(tool => `
+              <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-brand-400 font-medium">${tool}</span>
+            `).join('')}
+          </div>
+        </div>
+      `;
+
+      document.getElementById('projectModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('projectModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside of dialog container
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('projectModal');
+      if (e.target === modal) {
+        closeModal();
       }
     });
 
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuIcon.className = 'fa-solid fa-bars text-xl';
+    // Close modal on Escape key press
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Filter Logic for Projects
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-brand-500', 'text-slate-950', 'shadow-glow');
+          b.classList.add('bg-slate-800/80', 'text-slate-300');
+        });
+
+        btn.classList.add('active', 'bg-brand-500', 'text-slate-950', 'shadow-glow');
+        btn.classList.remove('bg-slate-800/80', 'text-slate-300');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category.includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
       });
     });
+
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Toast Notification System
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.innerText = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 4000);
+    }
+
+    // Form submission simulation
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('senderName').value;
+      showToast(`Thank you, ${name}! Your message has been received.`);
+      document.getElementById('contactForm').reset();
+    }
+
+    // Metric Number Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    let hasAnimatedCounters = false;
+
+    function runCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const speed = target > 100 ? 15 : 80;
+        const increment = Math.ceil(target / (1000 / speed));
+
+        const updateCounter = () => {
+          count += increment;
+          if (count < target) {
+            counter.innerText = count;
+            setTimeout(updateCounter, speed);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCounter();
+      });
+    }
+
+    // IntersectionObserver for Scroll Animations & Counter Trigger
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          if (!hasAnimatedCounters && entry.target.closest('section')?.querySelector('.counter')) {
+            runCounters();
+            hasAnimatedCounters = true;
+          }
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
